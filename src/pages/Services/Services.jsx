@@ -23,7 +23,7 @@ const skillsData = [
     aosDelay: "500",
   },
   {
-    name: "Deneyimli Sürücüler",
+    name: "Deneyimli Kişiler",
     icon: (
       <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
     ),

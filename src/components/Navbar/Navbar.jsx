@@ -36,10 +36,12 @@ const Navbar = ({ theme, setTheme }) => {
 
   return (
     <div className="relative z-50 shadow-md w-full dark:bg-black dark:text-white duration-300">
-      <div className="container py-1 md:py-0"> 
+      <div className="container py-1 md:py-0">
         <div className="flex justify-between items-center p-0">
           <div className="relative">
-            <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain" />
+            <a href="">
+              <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
+            </a>
           </div>
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">

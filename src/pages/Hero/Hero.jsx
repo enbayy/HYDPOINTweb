@@ -5,6 +5,7 @@ import AOS from "aos";
 import bgImage from "../../assets/fabrika.jpg";
 
 const Hero = ({ theme }) => {
+
   useEffect(() => {
     AOS.refresh();
   });
@@ -13,11 +14,10 @@ const Hero = ({ theme }) => {
     <div className="relative dark:bg-black dark:text-white duration-300">
       <img
         src={bgImage}
-        alt="Background"
+        alt="HYD POINT"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
-
       <div className="container min-h-[620px] flex relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center">
           <div
