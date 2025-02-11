@@ -5,31 +5,31 @@ import crane from "../../assets/malzeme.png";
 
 const machineList = [
   {
-    name: "Excavator Model X",
-    price: 15000,
+    name: "XXXXXXXXXXXXX",
+    price: 0,
     image: excavator,
     aosDelay: "0",
-    type: "Excavator",
-    condition: "New",
-    location: "Istanbul, Turkey",
+    type: "XXXXXXXXXXXXX",
+    condition: "XXXXXXXXXXXXX",
+    location: "Konya, Turkey",
   },
   {
-    name: "Bulldozer Model Y",
-    price: 18000,
+    name: "XXXXXXXXXXXXX",
+    price: 0,
     image: bulldozer,
     aosDelay: "500",
-    type: "Bulldozer",
-    condition: "Used",
-    location: "Ankara, Turkey",
+    type: "XXXXXXXXXXXXX",
+    condition: "XXXXXXXXXXXXX",
+    location: "Konya, Turkey",
   },
   {
-    name: "Crane Model Z",
-    price: 20000,
+    name: "XXXXXXXXXXXXX",
+    price: 0,
     image: crane,
     aosDelay: "1000",
-    type: "Crane",
-    condition: "New",
-    location: "Izmir, Turkey",
+    type: "XXXXXXXXXXXXX",
+    condition: "XXXXXXXXXXXXX",
+    location: "Konya, Turkey",
   },
 ];
 
@@ -37,7 +37,6 @@ const MachineList = () => {
   return (
     <div className="pb-24">
       <div className="container">
-        {/* Heading */}
         <h1
           data-aos="fade-up"
           className="text-3xl sm:text-4xl font-semibold font-serif mb-3"
@@ -45,9 +44,8 @@ const MachineList = () => {
          ÜRÜNLER
         </h1>
         <p data-aos="fade-up" aos-delay="400" className="text-sm pb-10">
-          İhtiyacınız olan makineleri hemen satın alabilir veya satabilirsiniz. Farklı tip ve modellerde makinelerle işlerinizi kolaylaştırın.
+          İhtiyacınız olan makineleri hemen satın alabilirsiniz. Farklı tip ve modellerde makinelerle işlerinizi kolaylaştırın.
         </p>
-        {/* Machine listing */}
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
             {machineList.map((data) => (
@@ -78,7 +76,6 @@ const MachineList = () => {
             ))}
           </div>
         </div>
-        {/* End of machine listing */}
         <div className="grid place-items-center mt-8">
           <button data-aos="fade-up" className="button-outline">
            HEPSİNİ GÖR

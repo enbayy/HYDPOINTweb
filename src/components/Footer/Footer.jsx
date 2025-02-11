@@ -49,7 +49,6 @@ const Footer = () => {
               <FaMobileAlt />
               <p>(0332) 501 10 11</p>
             </div>
-            {/* Social Handles */}
             <div className="flex items-center gap-3 mt-6">
               <a href="#">
                 <FaInstagram className="text-3xl hover:text-primary duration-300" />
@@ -63,7 +62,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div>
               <div className="py-8 px-4">
@@ -90,18 +88,24 @@ const Footer = () => {
                   İletişim
                 </h1>
                 <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
+                  {[
+                    { title: "info@hydpoint.com", link: "mailto:info@hydpoint.com" },
+                    { title: "(0332) 501 10 11", link: "tel:+905551234567" },
+                  ].map((item) => (
                     <li
-                      key={link.title}
+                      key={item.title}
                       className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200"
                     >
-                      <span>&#11162;</span>
-                      <span>{link.title}</span>
+                      <a href={item.link} className="flex items-center gap-1">
+                        <span>&#11162;</span>
+                        <span>{item.title}</span>
+                      </a>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
+
 
             <div>
               <div className="py-8 px-4">

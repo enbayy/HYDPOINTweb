@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
-import HYDPOINT from '../../assets/HYDPOINT.png'; // Resmin yolu
+import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png'; // Resmin yolu
 
 export const Navlinks = [
   {
@@ -35,11 +35,11 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
-    <div className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300 h-32">
+    <div className="relative z-50 shadow-md w-full dark:bg-black dark:text-white duration-300">
       <div className="container py-1 md:py-0"> 
-        <div className="flex justify-between items-center">
-          <div className="relative ">
-            <img src={HYDPOINT} alt="HYDPOINT" className="w-32 h-32 object-contain" />
+        <div className="flex justify-between items-center p-0">
+          <div className="relative">
+            <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain" />
           </div>
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
