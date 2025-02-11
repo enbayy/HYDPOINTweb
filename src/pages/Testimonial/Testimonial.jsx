@@ -14,7 +14,7 @@ const testimonialData = [
     aosDelay: "300",
   },
   {
-    name: "Zeynep",
+    name: "Feyza",
     image: "",
     description: "Hizmet kalitesi gerçekten çok yüksek. Güvenli bir şekilde işlem yapabiliyoruz.",
     aosDelay: "1000",
