@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
-import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png'; // Resmin yolu
+import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png';
 
 export const Navlinks = [
   {
@@ -13,17 +13,17 @@ export const Navlinks = [
   {
     id: 2,
     name: "ÜRÜNLERİMİZ",
-    link: "/#cars",
+    link: "/#urunler",
   },
   {
     id: 3,
     name: "HAKKIMIZDA",
-    link: "/#about",
+    link: "/#hakkimizda",
   },
   {
     id: 4,
     name: "İLETİŞİM",
-    link: "/#booking",
+    link: "/#",
   },
 ];
 
