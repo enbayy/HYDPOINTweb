@@ -1,17 +1,14 @@
 import React, { Component, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// Component import
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Services from "./components/Services/Services";
-import CarList from "./components/CarList/CarList";
-import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner";
-import Contact from "./components/Contact/Contact";
-import Testimonial from "./components/Testimonial/Testimonial";
+import Hero from "./pages/Hero/Hero";
+import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
+import Contact from "./pages/Contact/Contact";
+import Testimonial from "./pages/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
+import MachineList from "./pages/MachineList/MachineList";
 
 const App = () => {
   // dark mode start
@@ -46,9 +43,8 @@ const App = () => {
       <Hero theme={theme} />
       <About />
       <Services />
-      <CarList />
+      <MachineList />
       <Testimonial />
-      <AppStoreBanner />
       <Contact />
       <Footer />
     </div>
