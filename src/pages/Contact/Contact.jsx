@@ -14,7 +14,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form verisini işleme (API'ye gönderme, vb.)
     alert("Form başarıyla gönderildi!");
   };
 

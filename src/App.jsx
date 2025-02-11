@@ -11,7 +11,6 @@ import Footer from "./components/Footer/Footer";
 import MachineList from "./pages/MachineList/MachineList";
 
 const App = () => {
-  // dark mode start
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -26,7 +25,6 @@ const App = () => {
       localStorage.setItem("theme", "light");
     }
   }, [theme]);
-  // dark mode end
 
   React.useEffect(() => {
     AOS.init({
