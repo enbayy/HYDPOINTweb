@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { Component, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -9,10 +8,7 @@ import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import Testimonial from "./pages/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
-import MachineList from "./pages/ProductList/ProductList";
-import Urunler from "./pages/ProductList/AllProductList";
-import ProductDetail from "./pages/ProductList/ProductDetail";
-import AboutDetail from "./pages/About/AboutDetail";
+import MachineList from "./pages/MachineList/MachineList";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -30,7 +26,7 @@ const App = () => {
     }
   }, [theme]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     AOS.init({
       offset: 100,
       duration: 800,
@@ -39,29 +35,17 @@ const App = () => {
     });
     AOS.refresh();
   }, []);
-
   return (
-    <Router>
-      <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
-        <Navbar theme={theme} setTheme={setTheme} />
-        <Routes>
-          <Route path="/" element={<>
-            <Hero theme={theme} />
-            <About />
-            <Services />
-            <MachineList />
-            <Testimonial />
-            <Contact />
-            <Footer />
-          </>} />
-          <Route path="/" element={<Hero theme={theme} />} />
-          <Route path="/urunler" element={<Urunler />} />
-          <Route path="/urunler/detay" element={<ProductDetail />} />
-          <Route path="/hakkimizda" element={<AboutDetail />} />
-          <Route path="/urunler/detay/:id" element={<ProductDetail />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+      <Navbar theme={theme} setTheme={setTheme} />
+      <Hero theme={theme} />
+      <About />
+      <Services />
+      <MachineList />
+      <Testimonial />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 
