@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { machineList } from "../../data/ProductData";
+import { machineList } from "../About/ProductData";
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -15,9 +15,9 @@ const ProductDetail = () => {
             <div className="flex flex-col items-center space-y-6">
                 <h1 className="text-3xl font-bold text-primary">{product.name}</h1>
                 <p className="text-lg">Ürün ID: {product.id}</p>
-                <img 
-                    src={product.image} 
-                    alt={product.name} 
+                <img
+                    src={product.image}
+                    alt={product.name}
                     className="w-64 h-64 object-contain rounded-lg border-2 border-gray-300"
                 />
                 <p className="text-lg">{product.type} - {product.condition}</p>

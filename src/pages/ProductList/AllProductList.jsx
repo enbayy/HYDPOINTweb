@@ -1,5 +1,5 @@
 import React from 'react';
-import { machineList } from '../../data/ProductData';
+import { machineList } from '../About/ProductData';
 import ProductCard from './ProductCard';
 
 const AllProductList = () => {

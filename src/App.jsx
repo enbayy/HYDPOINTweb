@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 import MachineList from "./pages/ProductList/ProductList";
 import Urunler from "./pages/ProductList/AllProductList";
 import ProductDetail from "./pages/ProductList/ProductDetail";
+import AboutDetail from "./pages/About/AboutDetail";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -53,8 +54,10 @@ const App = () => {
             <Contact />
             <Footer />
           </>} />
+          <Route path="/" element={<Hero theme={theme} />} />
           <Route path="/urunler" element={<Urunler />} />
           <Route path="/urunler/detay" element={<ProductDetail />} />
+          <Route path="/hakkimizda" element={<AboutDetail />} />
           <Route path="/urunler/detay/:id" element={<ProductDetail />} />
         </Routes>
       </div>
