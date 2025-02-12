@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
 import malzeme1 from "../../assets/malzeme.png";
 import malzeme2 from "../../assets/malzeme.png";
-import AOS from "aos";
 import bgImage from "../../assets/fabrika.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = ({ theme }) => {
-
-  useEffect(() => {
-    AOS.refresh();
-  });
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/urunler")
+  }
 
   return (
-    <div className="relative dark:bg-black dark:text-white duration-300">
+    <div className="relative dark:bg-black dark:text-white duration-300 p-4">
       <img
         src={bgImage}
         alt="HYD POINT"
@@ -58,9 +57,7 @@ const Hero = ({ theme }) => {
             <button
               data-aos="fade-up"
               data-aos-delay="1500"
-              onClick={() => {
-                AOS.refreshHard();
-              }}
+              onClick={handleClick}
               className="rounded-md bg-primary hover:bg-primary/80 transition duration-500 py-2 px-6 text-black"
             >
               Hemen Başla

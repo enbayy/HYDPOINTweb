@@ -1,8 +1,15 @@
 import React from "react";
 import { machineList } from "../../data/ProductData";
 import ProductCard from "./ProductCard";
+import { useNavigate } from "react-router-dom";
 
 const ProductList = () => {
+  const displayedMachines = machineList.slice(0, 6);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/urunler")
+  }
+
   return (
     <section id="urunler">
       <div className="pb-24">
@@ -18,13 +25,13 @@ const ProductList = () => {
           </p>
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
-              {machineList.map((data) => (
+              {displayedMachines.map((data) => (
                 <ProductCard key={data.id} data={data} />
               ))}
             </div>
           </div>
           <div className="grid place-items-center mt-8">
-            <button data-aos="fade-up" className="button-outline">
+            <button data-aos="fade-up" className="button-outline" onClick={handleClick}>
               HEPSİNİ GÖR
             </button>
           </div>

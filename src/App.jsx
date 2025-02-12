@@ -63,7 +63,6 @@ const App = () => {
           <Route path="/iletisim" element={<Contact />} />
         </Routes>
         <Footer />
-
         <div className="fixed bottom-0 right-0 z-30">
           <button
             onClick={() => {
