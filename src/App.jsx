@@ -8,6 +8,9 @@ import Footer from "./components/Footer/Footer";
 import AllProductList from "./pages/ProductPage/AllProductList.jsx";
 import About from "./pages/AboutPage/About.jsx";
 import Contact from "./pages/ContactPage/Contact.jsx";
+import Services from "./pages/ServicesPage/Services.jsx"; 
+import MachineList from "./pages/ProductPage/ProductList.jsx";
+import Testimonial from "./pages/TestimonialPage/Testimonial.jsx"; 
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -45,6 +48,10 @@ const App = () => {
           <Route path="/hakkimizda" element={<About />} />
           <Route path="/iletisim" element={<Contact />} />
         </Routes>
+        <About />
+        <Services /> {/* Yeni eklenen component */}
+        <MachineList /> {/* Yeni eklenen component */}
+        <Testimonial /> {/* Yeni eklenen component */}
         <Footer />
       </div>
     </Router>
