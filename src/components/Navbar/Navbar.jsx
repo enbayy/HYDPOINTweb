@@ -9,7 +9,7 @@ export const Navlinks = [
   {
     id: 1,
     name: "ANASAYFA",
-    link: "/#",
+    link: "/",
   },
   {
     id: 2,
