@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./pages/Hero/Hero";
-import About from "./pages/About/About";
-import Services from "./pages/Services/Services";
-import Contact from "./pages/Contact/Contact";
-import Testimonial from "./pages/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
-import MachineList from "./pages/ProductList/ProductList";
-import Urunler from "./pages/ProductList/AllProductList";
-import ProductDetail from "./pages/ProductList/ProductDetail";
+import AllProductList from "./pages/ProductList/AllProductList";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -44,19 +40,12 @@ const App = () => {
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
-          <Route path="/" element={<>
-            <Hero theme={theme} />
-            <About />
-            <Services />
-            <MachineList />
-            <Testimonial />
-            <Contact />
-            <Footer />
-          </>} />
-          <Route path="/urunler" element={<Urunler />} />
-          <Route path="/urunler/detay" element={<ProductDetail />} />
-          <Route path="/urunler/detay/:id" element={<ProductDetail />} />
+          <Route path="/" element={<Hero theme={theme} />} />
+          <Route path="/urunler" element={<AllProductList />} />
+          <Route path="/hakkimizda" element={<About />} />
+          <Route path="/iletisim" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

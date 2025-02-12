@@ -23,7 +23,7 @@ export const Navlinks = [
   {
     id: 4,
     name: "İLETİŞİM",
-    link: "/",
+    link: "/iletisim",
   },
 ];
 
