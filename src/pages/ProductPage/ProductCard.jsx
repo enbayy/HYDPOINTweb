@@ -13,7 +13,6 @@ const ProductCard = ({ data }) => {
             data-aos="fade-up"
             data-aos-delay={data.aosDelay}
             className="space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group"
-            onClick={handleClick}
         >
             <div className="w-full h-[120px]">
                 <img
@@ -27,7 +26,7 @@ const ProductCard = ({ data }) => {
                 <p>{data.type} - {data.condition}</p>
                 <div className="flex justify-between items-center text-xl font-semibold">
                     <p>{data.price}TL</p>
-                    <button>Details</button>
+                    <button onClick={handleClick}>Details</button>
                 </div>
             </div>
             <p className="text-sm absolute bottom-0 left-3">

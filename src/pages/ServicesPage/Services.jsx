@@ -2,6 +2,7 @@ import React from "react";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
 import { SlNote } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
 const skillsData = [
   {
@@ -34,6 +35,10 @@ const skillsData = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/iletisim")
+  }
   return (
     <>
       <span id="about"></span>
@@ -58,12 +63,12 @@ const Services = () => {
                 <div className="grid place-items-center">{skill.icon}</div>
                 <h1 className="text-2xl font-bold">{skill.name}</h1>
                 <p>{skill.description}</p>
-                <a
-                  href={skill.link}
+                <button
+                  onClick={handleClick}
                   className="inline-block text-lg font-semibold py-3 text-primary group-hover:text-black duration-300"
                 >
                   Daha Fazla Bilgi
-                </a>
+                </button>
               </div>
             ))}
           </div>
