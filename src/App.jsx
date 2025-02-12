@@ -14,11 +14,15 @@ import Testimonial from "./pages/TestimonialPage/Testimonial.jsx";
 import AboutDetail from "./pages/AboutPage/AboutDetailPage.jsx";
 import ProductDetail from "./pages/ProductPage/ProductDetail.jsx";
 import { RiWhatsappFill } from "react-icons/ri";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const App = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
+  const [showSocialIcons, setShowSocialIcons] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const element = document.documentElement;
 
   useEffect(() => {
@@ -59,14 +63,56 @@ const App = () => {
           <Route path="/iletisim" element={<Contact />} />
         </Routes>
         <Footer />
-        <a
-          href="https://wa.me/905522312086"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform z-30"
-        >
-          <RiWhatsappFill size={30} />
-        </a>
+
+        <div className="fixed bottom-0 right-0 z-30">
+          <button
+            onClick={() => {
+              setShowSocialIcons(!showSocialIcons);
+              setIsOpen(!isOpen);
+            }}
+            className="bg-blue-500 text-white p-4 rounded-full shadow-lg mb-2 transition-transform"
+          >
+            {isOpen ? <IoIosArrowBack size={20} /> : <IoIosArrowForward size={20} />}
+          </button>
+          <div
+            className={`flex flex-col space-y-2 transition-transform ${showSocialIcons ? "translate-x-0" : "translate-x-full"
+              }`}
+            style={{ transition: "transform 0.3s ease-in-out" }}
+          >
+            <a
+              href="https://wa.me/905522312086"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white p-4 rounded-full shadow-lg transition-transform"
+            >
+              <RiWhatsappFill size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-pink-500 text-white p-4 rounded-full shadow-lg transition-transform"
+            >
+              <FaInstagram size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-400 text-white p-4 rounded-full shadow-lg transition-transform"
+            >
+              <FaTwitter size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </Router>
   );
