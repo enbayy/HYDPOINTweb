@@ -13,7 +13,7 @@ export const Navlinks = [
   {
     id: 2,
     name: "ÜRÜNLERİMİZ",
-    link: "/#urunler",
+    link: "/urunler",
   },
   {
     id: 3,
@@ -39,7 +39,9 @@ const Navbar = ({ theme, setTheme }) => {
       <div className="container py-1 md:py-0">
         <div className="flex justify-between items-center p-0">
           <div className="relative">
-            <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain" />
+            <a href="">
+              <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
+            </a>
           </div>
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
