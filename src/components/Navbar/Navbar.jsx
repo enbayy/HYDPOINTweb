@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
+import { Link } from "react-router-dom"; // Import Link component
 import ResponsiveMenu from "./ResponsiveMenu";
 import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png';
 
@@ -13,7 +14,7 @@ export const Navlinks = [
   {
     id: 2,
     name: "ÜRÜNLERİMİZ",
-    link: "/#urunler",
+    link: "/urunler", // Update the link to /urunler
   },
   {
     id: 3,
@@ -47,12 +48,12 @@ const Navbar = ({ theme, setTheme }) => {
             <ul className="flex items-center gap-8">
               {Navlinks.map(({ id, name, link }) => (
                 <li key={id} className="py-4">
-                  <a
-                    href={link}
+                  <Link
+                    to={link} // Use Link instead of a regular <a> tag
                     className="text-lg font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500 cursor-pointer"
                   >
                     {name}
-                  </a>
+                  </Link>
                 </li>
               ))}
               {theme === "dark" ? (
