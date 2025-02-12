@@ -1,6 +1,6 @@
-import excavator from "./../assets/malzeme.png";
-import bulldozer from "./../assets/malzeme.png";
-import crane from "./../assets/malzeme.png";
+import excavator from "../../assets/malzeme.png";
+import bulldozer from "../../assets/malzeme.png";
+import crane from "../../assets/malzeme.png";
 
 export const machineList = [
     {
