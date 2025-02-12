@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./pages/Hero/Hero";
+import Hero from "./pages/HeroPage/Hero.jsx";
 import Footer from "./components/Footer/Footer";
-import AllProductList from "./pages/ProductList/AllProductList.jsx";
-import About from "./pages/About/About.jsx";
-import Contact from "./pages/Contact/Contact.jsx";
+import AllProductList from "./pages/ProductPage/AllProductList.jsx";
+import About from "./pages/AboutPage/About.jsx";
+import Contact from "./pages/ContactPage/Contact.jsx";
 
 const App = () => {
   const [theme, setTheme] = useState(
