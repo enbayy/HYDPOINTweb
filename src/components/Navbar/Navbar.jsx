@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
-import { Link } from "react-router-dom"; // Link'i kullan
 import ResponsiveMenu from "./ResponsiveMenu";
 import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png';
 
@@ -9,22 +8,22 @@ export const Navlinks = [
   {
     id: 1,
     name: "ANASAYFA",
-    link: "/", // Ana sayfaya yönlendirme
+    link: "/#",
   },
   {
     id: 2,
     name: "ÜRÜNLERİMİZ",
-    link: "/urunler", // Ürünler sayfasına yönlendirme
+    link: "/#urunler",
   },
   {
     id: 3,
     name: "HAKKIMIZDA",
-    link: "/hakkimizda", // Hakkımızda sayfasına yönlendirme
+    link: "/#hakkimizda",
   },
   {
     id: 4,
     name: "İLETİŞİM",
-    link: "/iletisim", // İletişim sayfasına yönlendirme
+    link: "/#",
   },
 ];
 
@@ -46,12 +45,12 @@ const Navbar = ({ theme, setTheme }) => {
             <ul className="flex items-center gap-8">
               {Navlinks.map(({ id, name, link }) => (
                 <li key={id} className="py-4">
-                  <Link
-                    to={link} // A href yerine Link öğesini kullanıyoruz
+                  <a
+                    href={link}
                     className="text-lg font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500 cursor-pointer"
                   >
                     {name}
-                  </Link>
+                  </a>
                 </li>
               ))}
               {theme === "dark" ? (
