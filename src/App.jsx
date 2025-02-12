@@ -5,9 +5,9 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./pages/Hero/Hero";
 import Footer from "./components/Footer/Footer";
-import AllProductList from "./pages/ProductList/AllProductList";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
+import AllProductList from "./pages/ProductList/AllProductList.jsx";
+import About from "./pages/About/About.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
 
 const App = () => {
   const [theme, setTheme] = useState(
