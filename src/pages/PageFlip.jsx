@@ -28,7 +28,7 @@ const Book = () => {
                 </div>
 
                 {pages.map((products, index) => (
-                    <div key={index} className="relative w-full h-68 bg-gradient-to-r from-white to-gray-700 p-6 shadow-lg">
+                    <div key={index} className="relative w-full h-68 bg-gray-400 p-6 shadow-lg">
                         <h2 className="text-lg font-semibold text-center text-gray-800 -mt-6">Sayfa {index + 1}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4 w-full h-auto">
                             {products.map((data) => (
