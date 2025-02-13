@@ -12,7 +12,7 @@ const ProductList = () => {
 
   return (
     <section id="urunler">
-      <div className="pb-24">
+      <div className="py-24">
         <div className="container">
           <h1
             data-aos="fade-up"
