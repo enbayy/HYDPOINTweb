@@ -23,7 +23,7 @@ const Book = () => {
             >
                 <div className="relative w-full h-full text-white text-2xl font-bold">
                     <div className="relative z-10 flex justify-center items-center h-full">
-                        <p className="text-3xl">ÜRÜN KATOLOĞU</p>
+                        <p className="text-5xl font-serif">ÜRÜN KATOLOĞU</p>
                     </div>
                 </div>
 
