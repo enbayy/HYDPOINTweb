@@ -54,8 +54,10 @@ const Book = () => {
             </div>
           </div>
         ))}
-        <div className="flex justify-center items-center w-full h-full bg-gray-300 text-xl font-bold text-gray-700">
-          Daha fazla ürün için bizi takip edin! 🚀
+        <div className="relative w-full h-full text-white text-xl font-bold p-20">
+          <div className="relative z-10 flex justify-center items-center h-full">
+            <p className="text-5xl font-serif text-center"> Daha fazla ürün için bizi takip edin! 🚀</p>
+          </div>
         </div>
       </HTMLFlipBook>
     </div>

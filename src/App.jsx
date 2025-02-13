@@ -56,7 +56,6 @@ const App = () => {
             <About />
             <Services />
             <Book />
-            <MachineList />
             <Testimonial />
           </>} />
           <Route path="/urunler" element={<AllProductList />} />
