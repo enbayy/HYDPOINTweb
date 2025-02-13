@@ -17,7 +17,7 @@ const Book = () => {
     return (
         <div className="flex justify-center items-center h-full bg-gradient-to-r from-gray-200 to-gray-100 p-8">
             <HTMLFlipBook
-                width={500}
+                width={700}
                 height={600}
                 className="shadow-2xl rounded-lg overflow-hidden bg-gradient-to-r from-gray-700 to-white"
             >
@@ -30,7 +30,7 @@ const Book = () => {
                 {pages.map((products, index) => (
                     <div key={index} className="relative w-full h-68 bg-gradient-to-r from-white to-gray-700 p-6 shadow-lg">
                         <h2 className="text-lg font-semibold text-center text-gray-800 -mt-6">Sayfa {index + 1}</h2>
-                        <div className="grid grid-cols-2 gap-4 w-full h-68">
+                        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full h-auto">
                             {products.map((data) => (
                                 <div key={data.id} className="flex justify-center">
                                     <ProductCard data={data} className="h-96" />
