@@ -12,7 +12,7 @@ const ProductCard = ({ data }) => {
         <div
             data-aos="fade-up"
             data-aos-delay={data.aosDelay}
-            className="h-68 space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group"
+            className="w-3/4 space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group"
         >
             <div className="w-full h-[120px] flex justify-center items-center">
                 <img
@@ -32,5 +32,6 @@ const ProductCard = ({ data }) => {
         </div>
     );
 };
+
 
 export default ProductCard;
