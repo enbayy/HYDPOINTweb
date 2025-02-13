@@ -16,8 +16,6 @@ import ProductDetail from "./pages/ProductPage/ProductDetail.jsx";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import MyBook from "./pages/PageFlip.jsx";
-import DemoBook from "./pages/PageFlip.jsx";
 import Book from "./pages/PageFlip.jsx";
 
 const App = () => {

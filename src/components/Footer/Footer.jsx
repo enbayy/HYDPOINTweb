@@ -6,23 +6,28 @@ import {
   FaLocationArrow,
   FaMobileAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FooterLinks = [
   {
-    title: "Home",
-    link: "/#",
+    id: 1,
+    title: "Anasayfa",
+    link: "/",
   },
   {
-    title: "About",
-    link: "/#about",
+    id: 2,
+    title: "Ürünler",
+    link: "/urunler",
   },
   {
+    id: 3,
+    title: "Hakkımızda",
+    link: "/hakkimizda",
+  },
+  {
+    id: 4,
     title: "Contact",
-    link: "/#contact",
-  },
-  {
-    title: "Blog",
-    link: "/#blog",
+    link: "/iletisim",
   },
 ];
 
@@ -61,7 +66,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div>
               <div className="py-8 px-4">
@@ -70,18 +74,19 @@ const Footer = () => {
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
-                    <li
-                      key={link.title}
-                      className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200"
-                    >
-                      <span>&#11162;</span>
-                      <span>{link.title}</span>
+                    <li key={link.title}>
+                      <Link
+                        to={link.link}
+                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200 flex items-center"
+                      >
+                        <span>&#11162;</span>
+                        <span>{link.title}</span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
@@ -105,8 +110,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-
-
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">

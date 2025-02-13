@@ -32,7 +32,7 @@ const Book = () => {
             key={index}
             className="relative w-full h-auto sm:h-auto md:h-auto lg:h-auto xl:h-auto bg-gray-400 p-6 shadow-lg"
           >
-            <h2 className="text-xl font-semibold text-center text-white -mt-4 mb-4">
+            <h2 className="text-xl font-semibold text-center text-black -mt-4 mb-4">
               Sayfa {index + 1}
             </h2>
             <div className="flex flex-wrap justify-center gap-4 px-2 xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-6">
@@ -46,10 +46,10 @@ const Book = () => {
               ))}
             </div>
 
-            <div className="absolute top-2 left-2 text-white hover:text-gray-700 cursor-pointer">
+            <div className="absolute top-2 left-2 text-black hover:text-gray-700 cursor-pointer">
               <ChevronLeft size={32} />
             </div>
-            <div className="absolute top-2 right-2 text-white hover:text-gray-700 cursor-pointer">
+            <div className="absolute top-2 right-2 text-black  hover:text-gray-700 cursor-pointer">
               <ChevronRight size={32} />
             </div>
           </div>
