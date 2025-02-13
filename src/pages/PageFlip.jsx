@@ -29,7 +29,7 @@ const Book = () => {
 
                 {pages.map((products, index) => (
                     <div key={index} className="relative w-full h-68 bg-gray-400 p-6 shadow-lg">
-                        <h2 className="text-lg font-semibold text-center text-gray-800 -mt-6">Sayfa {index + 1}</h2>
+                        <h2 className="text-xl font-semibold text-center text-white -mt-4 mb-4">Sayfa {index + 1}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4 w-full h-auto">
                             {products.map((data) => (
                                 <div key={data.id} className="flex justify-center">
@@ -37,11 +37,11 @@ const Book = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="absolute top-0 left-2 text-gray-500 hover:text-gray-700 cursor-pointer">
-                            <ChevronLeft size={24} />
+                        <div className="absolute top-2 left-2 text-white hover:text-gray-700 cursor-pointer">
+                            <ChevronLeft size={32} />
                         </div>
-                        <div className="absolute top-0 right-2 text-gray-500 hover:text-gray-700 cursor-pointer">
-                            <ChevronRight size={24} />
+                        <div className="absolute top-2 right-2 text-white hover:text-gray-700 cursor-pointer">
+                            <ChevronRight size={32} />
                         </div>
                     </div>
                 ))}
