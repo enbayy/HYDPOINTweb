@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
+import { Link, useLocation } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
 import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png';
-import { Link } from "react-router-dom";
 
 export const Navlinks = [
   {
@@ -30,6 +30,7 @@ export const Navlinks = [
 
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -50,7 +51,8 @@ const Navbar = ({ theme, setTheme }) => {
                 <li key={id} className="py-4">
                   <Link
                     to={link}
-                    className="text-lg font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500 cursor-pointer"
+                    className={`text-lg font-medium py-2 transition-colors duration-500 cursor-pointer 
+                      ${location.pathname === link ? "text-primary border-b-2 border-primary" : "hover:text-primary hover:border-b-2 hover:border-primary"}`}
                   >
                     {name}
                   </Link>
