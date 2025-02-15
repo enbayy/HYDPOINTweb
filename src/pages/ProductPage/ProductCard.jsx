@@ -14,11 +14,16 @@ const ProductCard = ({ data }) => {
             data-aos-delay={data.aosDelay}
             className="w-3/4 space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group"
         >
-            <div className="w-full h-[120px] flex justify-center items-center">
+            <div className="w-full h-[120px] flex justify-center items-center bg-white">
                 <img
                     src={data.image}
                     alt={data.name}
-                    className="max-w-full max-h-full object-contain block mx-auto group-hover:sm:translate-x-4 duration-700"
+                    className="absolute w-3/4 h-3/4 object-contain opacity-50 blur-md scale-110 shadow-lg"
+                />
+                <img
+                    src={data.image}
+                    alt={data.name}
+                    className="relative w-full h-full object-contain transform group-hover:scale-150 transition-transform duration-500"
                 />
             </div>
             <div className="space-y-2 text-center">
