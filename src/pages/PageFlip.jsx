@@ -16,11 +16,11 @@ const Book = () => {
   const pages = chunkArray(machineList, 4);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-gray-200 to-gray-100 p-4 sm:p-8">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-8">
       <HTMLFlipBook
         width={600}
         height={650}
-        className="shadow-2xl rounded-lg overflow-hidden bg-gradient-to-r from-gray-700 to-white"
+        className="shadow-2xl rounded-lg overflow-hidden bg-gradient-to-r from-gray-700 dark:from-gray-900 dark:to-gray-800 to-white"
       >
         <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-white text-2xl font-bold px-10 space-y-36 mt-10">
           <img
@@ -36,7 +36,7 @@ const Book = () => {
         {pages.map((products, index) => (
           <div
             key={index}
-            className="relative w-full h-auto bg-gray-400 p-6 shadow-lg"
+            className="relative w-full h-auto bg-gray-400 dark:bg-gray-900 p-6 shadow-lg"
           >
             <h2 className="text-xl font-semibold text-center text-black mb-4">
               Sayfa {index + 1}
