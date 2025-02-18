@@ -21,8 +21,9 @@ const Book = () => {
         width={600}
         height={650}
         className="rounded-lg overflow-hidden bg-white dark:bg-black"
+        style={{ overflow: 'hidden' }}
       >
-        <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-white text-2xl font-bold px-36 space-y-36 mt-10">
+        <div className="relative w-full h-auto flex flex-col items-center justify-center text-white text-2xl font-bold p-16 space-y-36 border border-black">
           <img
             src={hyd}
             alt="Ürün Kataloğu"
@@ -36,7 +37,7 @@ const Book = () => {
         {pages.map((products, index) => (
           <div
             key={index}
-            className="relative w-full h-auto bg-white dark:bg-black p-6"
+            className="relative w-full h-auto bg-white dark:bg-black p-6 border border-black"
           >
             <h2 className="text-xl font-semibold text-center text-black dark:text-white mb-4">
               Sayfa {index + 1}
@@ -59,7 +60,7 @@ const Book = () => {
             </div>
           </div>
         ))}
-        <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-white text-2xl font-bold px-10 space-y-36  mt-10">
+        <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-white text-2xl font-bold px-10 space-y-36 mt-10">
           <img
             src={hyd}
             alt="Takip Edin"
@@ -73,5 +74,4 @@ const Book = () => {
     </div>
   );
 };
-
 export default Book;
