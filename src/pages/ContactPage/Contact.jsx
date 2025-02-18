@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <>
       <span id="contact"></span>
-      <div data-aos="zoom-in" className="dark:bg-black dark:text-white py-14">
+      <div data-aos="zoom-in" className="dark:bg-black dark:text-white py-24">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-gray-800 py-8 px-6 rounded-lg shadow-lg">
             <div className="col-span-2 sm:col-span-1 space-y-3">
