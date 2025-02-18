@@ -4,7 +4,6 @@ import ProductCard from "./ProductPage/ProductCard";
 import { machineList } from "../data/ProductData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import hyd from '../assets/HYDPOINT3.png'
-import office from '../assets/book-bg.jpg'
 
 const chunkArray = (arr, size) => {
   return arr.reduce((acc, _, i) => {
@@ -17,11 +16,11 @@ const Book = () => {
   const pages = chunkArray(machineList, 4);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white dark:from-black dark:to-black p-4 sm:p-8">
+    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-black p-4 sm:p-8">
       <HTMLFlipBook
         width={600}
         height={650}
-        className="shadow-2xl rounded-lg overflow-hidden bg-gradient-to-r from-stone-700 dark:from-gray-900 dark:to-gray-800 to-white"
+        className="rounded-lg overflow-hidden bg-white dark:bg-black"
       >
         <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-white text-2xl font-bold px-36 space-y-36 mt-10">
           <img
@@ -30,22 +29,15 @@ const Book = () => {
             className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border dark:p-4 rounded-3xl"
           />
           <div className="relative z-10 text-center space-y-4">
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif">ÜRÜN</p>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif">KATALOĞU</p>
+            <p className="text-3xl text-black dark:text-white sm:text-4xl md:text-5xl font-serif">ÜRÜN</p>
+            <p className="text-3xl text-black dark:text-white sm:text-4xl md:text-5xl font-serif">KATALOĞU</p>
           </div>
         </div>
         {pages.map((products, index) => (
           <div
             key={index}
-            className="relative w-full h-auto bg-gray-400 dark:bg-gray-900 p-6 shadow-lg"
+            className="relative w-full h-auto bg-white dark:bg-black p-6"
           >
-            <img
-              src={office}
-              alt="Background"
-              className="absolute inset-0 w-full h-auto object-cover z-0"
-            />
-
-            <div className="absolute inset-0 bg-stone-700 opacity-50"></div>
             <h2 className="text-xl font-semibold text-center text-black dark:text-white mb-4">
               Sayfa {index + 1}
             </h2>
@@ -74,7 +66,7 @@ const Book = () => {
             className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border dark:p-4 rounded-3xl"
           />
           <div className="relative z-10 text-center">
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif">Daha fazla ürün için bizi takip edin! 🚀</p>
+            <p className="text-black dark:text-white text-3xl sm:text-4xl md:text-4xl font-serif">Daha fazla ürün için bizi takip edin! 🚀</p>
           </div>
         </div>
       </HTMLFlipBook>
