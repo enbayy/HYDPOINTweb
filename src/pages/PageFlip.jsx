@@ -3,7 +3,7 @@ import HTMLFlipBook from "react-pageflip";
 import ProductCard from "./ProductPage/ProductCard";
 import { machineList } from "../data/ProductData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import hyd from '../assets/HYDPOINT3.png'
+import hyd from '../assets/HYDPOINT3.png';
 
 const chunkArray = (arr, size) => {
   return arr.reduce((acc, _, i) => {
@@ -16,14 +16,14 @@ const Book = () => {
   const pages = chunkArray(machineList, 4);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-black p-8 sm:p-8">
+    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-black p-4 sm:p-6 lg:p-8">
       <HTMLFlipBook
-        width={600}
+        width={550}
         height={650}
         className="rounded-lg overflow-hidden bg-white dark:bg-black"
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: 'hidden', width: '100%', height: '100%' }}
       >
-        <div className="relative w-full h-auto flex flex-col items-center justify-center text-white text-2xl font-bold p-16 space-y-36 border border-black dark:border-white">
+        <div className="relative w-full h-auto flex flex-col items-center justify-center text-white text-2xl font-bold p-16 sm:p-8 space-y-24 border border-black dark:border-white">
           <img
             src={hyd}
             alt="Ürün Kataloğu"

@@ -9,7 +9,6 @@ import AllProductList from "./pages/ProductPage/AllProductList.jsx";
 import About from "./pages/AboutPage/About.jsx";
 import Contact from "./pages/ContactPage/Contact.jsx";
 import Services from "./pages/ServicesPage/Services.jsx";
-import MachineList from "./pages/ProductPage/ProductList.jsx";
 import Testimonial from "./pages/TestimonialPage/Testimonial.jsx";
 import AboutDetail from "./pages/AboutPage/AboutDetailPage.jsx";
 import ProductDetail from "./pages/ProductPage/ProductDetail.jsx";
@@ -17,6 +16,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Book from "./pages/PageFlip.jsx";
+import ScrollToTop from "./pages/ScrollToTop.js";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -48,6 +48,7 @@ const App = () => {
 
   return (
     <Router>
+       <ScrollToTop />
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
