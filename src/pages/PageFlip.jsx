@@ -16,18 +16,18 @@ const Book = () => {
   const pages = chunkArray(machineList, 4);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-black p-4 sm:p-8">
+    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-black p-8 sm:p-8">
       <HTMLFlipBook
         width={600}
         height={650}
         className="rounded-lg overflow-hidden bg-white dark:bg-black"
         style={{ overflow: 'hidden' }}
       >
-        <div className="relative w-full h-auto flex flex-col items-center justify-center text-white text-2xl font-bold p-16 space-y-36 border border-black">
+        <div className="relative w-full h-auto flex flex-col items-center justify-center text-white text-2xl font-bold p-16 space-y-36 border border-black dark:border-white">
           <img
             src={hyd}
             alt="Ürün Kataloğu"
-            className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border border-black dark:p-4 rounded-3xl"
+            className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border border-black dark:border-white dark:p-4 rounded-3xl"
           />
           <div className="relative z-10 text-center space-y-4">
             <p className="text-3xl text-black dark:text-white sm:text-4xl md:text-5xl font-serif">ÜRÜN</p>
@@ -37,7 +37,7 @@ const Book = () => {
         {pages.map((products, index) => (
           <div
             key={index}
-            className="relative w-full h-auto bg-white dark:bg-black p-6 border border-black"
+            className="relative w-full h-auto bg-white dark:bg-black p-6 border border-black dark:border-white"
           >
             <h2 className="text-xl font-semibold text-center text-black dark:text-white mb-4">
               Sayfa {index + 1}
@@ -74,4 +74,5 @@ const Book = () => {
     </div>
   );
 };
+
 export default Book;

@@ -33,7 +33,7 @@ const Navbar = ({ theme, setTheme }) => {
   const location = useLocation();
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu((prevState) => !prevState);
   };
 
   const closeMenu = () => {
@@ -49,7 +49,7 @@ const Navbar = ({ theme, setTheme }) => {
               <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
             </a>
           </div>
-          <nav className="hidden md:block">
+          <nav className="hidden lg:flex">
             <ul className="flex items-center gap-8">
               {Navlinks.map(({ id, name, link }) => (
                 <li key={id} className="py-4">
@@ -64,7 +64,7 @@ const Navbar = ({ theme, setTheme }) => {
               ))}
               <Link
                 to="/iletisim"
-                className="bg-primary text-black px-4 py-2 rounded-lg hidden md:block hover:bg-yellow-500 transition"
+                className="bg-primary text-black px-4 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition"
               >
                 Hızlı Teklif Al
               </Link>
@@ -81,7 +81,7 @@ const Navbar = ({ theme, setTheme }) => {
               )}
             </ul>
           </nav>
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-4 lg:hidden">
             {theme === "dark" ? (
               <BiSolidSun
                 onClick={() => setTheme("light")}
