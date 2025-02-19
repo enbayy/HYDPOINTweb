@@ -99,12 +99,12 @@ const Footer = () => {
                   ].map((item) => (
                     <li
                       key={item.title}
-                      className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200"
+                      className="space-x-1 text-gray-500 dark:text-gray-200"
                     >
-                      <a href={item.link} className="flex items-center gap-1">
+                      <p href={item.link} className="flex items-center gap-1">
                         <span>&#11162;</span>
                         <span>{item.title}</span>
-                      </a>
+                      </p>
                     </li>
                   ))}
                 </ul>

@@ -36,12 +36,16 @@ const Navbar = ({ theme, setTheme }) => {
     setShowMenu(!showMenu);
   };
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full z-50 shadow-md bg-white dark:bg-black dark:text-white duration-300">
       <div className="container py-1 md:py-0">
         <div className="flex justify-between items-center p-0">
           <div className="relative">
-            <a href="">
+            <a href="/">
               <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
             </a>
           </div>
@@ -58,6 +62,12 @@ const Navbar = ({ theme, setTheme }) => {
                   </Link>
                 </li>
               ))}
+              <Link
+                to="/iletisim"
+                className="bg-primary text-black px-4 py-2 rounded-lg hidden md:block hover:bg-yellow-500 transition"
+              >
+                Hızlı Teklif Al
+              </Link>
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
@@ -99,7 +109,7 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+      <ResponsiveMenu showMenu={showMenu} closeMenu={closeMenu} />
     </div>
   );
 };

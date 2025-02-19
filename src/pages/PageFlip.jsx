@@ -27,7 +27,7 @@ const Book = () => {
           <img
             src={hyd}
             alt="Ürün Kataloğu"
-            className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border dark:p-4 rounded-3xl"
+            className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border border-black dark:p-4 rounded-3xl"
           />
           <div className="relative z-10 text-center space-y-4">
             <p className="text-3xl text-black dark:text-white sm:text-4xl md:text-5xl font-serif">ÜRÜN</p>

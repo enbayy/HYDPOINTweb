@@ -11,7 +11,7 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className="container mx-auto p-16 mt-12">
+        <div className="container mx-auto p-16 mt-12 space-y-6">
             <div className="flex flex-col items-center space-y-6">
                 <h1 className="text-3xl font-bold text-primary">{product.name}</h1>
                 <p className="text-lg">Ürün ID: {product.id}</p>
@@ -23,6 +23,9 @@ const ProductDetail = () => {
                 <p className="text-lg">{product.type} - {product.condition}</p>
                 <p className="text-xl font-semibold">{product.price} TL</p>
                 <p className="text-sm">{product.location}</p>
+            </div>
+            <div className="flex justify-center items-center">
+                <button onClick={() => window.history.back()} className="bg-primary text-lg p-2 rounded-xl">Listeye Dön</button>
             </div>
         </div>
     );
