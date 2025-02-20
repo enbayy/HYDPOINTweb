@@ -47,7 +47,7 @@ const Services = () => {
           <div className="pb-12">
             <h1
               data-aos="fade-up"
-              className="text-3xl font-semibold text-center sm:text-4xl font-serif"
+              className="text-3xl font-semibold text-center sm:text-4xl font-sans"
             >
               Neden Bizi Tercih Etmelisiniz?
             </h1>

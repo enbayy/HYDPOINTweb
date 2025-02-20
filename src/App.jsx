@@ -12,7 +12,8 @@ import Services from "./pages/ServicesPage/Services.jsx";
 import AboutDetail from "./pages/AboutPage/AboutDetailPage.jsx";
 import ProductDetail from "./pages/ProductPage/ProductDetail.jsx";
 import { RiWhatsappFill } from "react-icons/ri";
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Book from "./pages/PageFlip.jsx";
 import ScrollToTop from "./pages/ScrollToTop.js";
@@ -69,7 +70,7 @@ const App = () => {
               setShowSocialIcons(!showSocialIcons);
               setIsOpen(!isOpen);
             }}
-            className="bg-blue-500 text-white p-4 rounded-full shadow-lg mb-2 transition-transform"
+            className="bg-yellow-500 text-white p-4 rounded-full shadow-lg mb-2 transition-transform"
           >
             {isOpen ? <IoIosArrowBack size={20} /> : <IoIosArrowForward size={20} />}
           </button>
@@ -106,9 +107,9 @@ const App = () => {
               href="https://www.twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-400 text-white p-4 rounded-full shadow-lg transition-transform"
+              className="bg-black text-white p-4 rounded-full shadow-lg transition-transform"
             >
-              <FaTwitter size={20} />
+              <FaSquareXTwitter size={20} />
             </a>
           </div>
         </div>

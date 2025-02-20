@@ -1,11 +1,12 @@
 import React from "react";
 import {
-  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const FooterLinks = [
@@ -16,7 +17,7 @@ const FooterLinks = [
   },
   {
     id: 2,
-    title: "Ürünler",
+    title: "Ürünlerimiz",
     link: "/urunler",
   },
   {
@@ -26,7 +27,7 @@ const FooterLinks = [
   },
   {
     id: 4,
-    title: "Contact",
+    title: "İletişim",
     link: "/iletisim",
   },
 ];
@@ -60,13 +61,16 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-3 mt-6">
               <a href="#">
+                <FaWhatsapp className="text-3xl hover:text-primary duration-300" />
+              </a>
+              <a href="#">
                 <FaInstagram className="text-3xl hover:text-primary duration-300" />
               </a>
               <a href="#">
-                <FaFacebook className="text-3xl hover:text-primary duration-300" />
+                <FaLinkedin className="text-3xl hover:text-primary duration-300" />
               </a>
               <a href="#">
-                <FaLinkedin className="text-3xl hover:text-primary duration-300" />
+                <FaSquareXTwitter className="text-3xl hover:text-primary duration-300" />
               </a>
             </div>
           </div>

@@ -41,9 +41,9 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 shadow-md bg-white dark:bg-black dark:text-white duration-300">
+    <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-800 dark:text-white transition-all duration-300">
       <div className="container py-1 md:py-0">
-        <div className="flex justify-between items-center p-0">
+        <div className="flex justify-between items-center p-2.5">
           <div className="relative">
             <a href="/">
               <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
@@ -52,11 +52,11 @@ const Navbar = ({ theme, setTheme }) => {
           <nav className="hidden lg:flex">
             <ul className="flex items-center gap-8">
               {Navlinks.map(({ id, name, link }) => (
-                <li key={id} className="py-4">
+                <li key={id} className="py-2">
                   <Link
                     to={link}
-                    className={`text-lg font-medium py-2 transition-colors duration-500 cursor-pointer 
-                      ${location.pathname === link ? "text-primary border-b-2 border-primary" : "hover:text-primary hover:border-b-2 hover:border-primary"}`}
+                    className={`text-lg font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
+                      ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-gray-700 hover:text-primary hover:border-b-4 hover:border-primary"}`}
                   >
                     {name}
                   </Link>
@@ -64,19 +64,19 @@ const Navbar = ({ theme, setTheme }) => {
               ))}
               <Link
                 to="/iletisim"
-                className="bg-primary text-black px-4 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition"
+                className="bg-primary text-white px-6 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition-colors duration-300"
               >
                 Hızlı Teklif Al
               </Link>
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
-                  className="text-2xl cursor-pointer"
+                  className="text-2xl cursor-pointer transition-all"
                 />
               ) : (
                 <BiSolidMoon
                   onClick={() => setTheme("dark")}
-                  className="text-2xl cursor-pointer"
+                  className="text-2xl cursor-pointer transition-all"
                 />
               )}
             </ul>

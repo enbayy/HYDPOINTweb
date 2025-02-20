@@ -18,7 +18,7 @@ const AboutDetail = () => {
                             <div className="space-y-6 sm:p-16 pb-6">
                                 <h1
                                     data-aos="fade-up"
-                                    className="text-3xl sm:text-4xl font-bold font-serif"
+                                    className="text-3xl sm:text-4xl font-bold font-sans"
                                 >
                                     Hakkımızda
                                 </h1>

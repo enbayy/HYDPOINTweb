@@ -31,7 +31,7 @@ const Hero = ({ theme }) => {
           />
         </div>
         <div className="space-y-5 order-2 sm:order-1 max-w-2xl">
-          <p data-aos="fade-up" className="text-primary text-2xl font-serif">
+          <p data-aos="fade-up" className="text-primary text-2xl font-sans">
             Kolay ve Hızlı
           </p>
           <h1
