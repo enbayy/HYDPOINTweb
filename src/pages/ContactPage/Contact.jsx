@@ -24,7 +24,6 @@ const Contact = () => {
       <div data-aos="zoom-in" className="py-24 dark:bg-black dark:text-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
-            {/* Left side: Contact form */}
             <div className="bg-gray-800 p-8 shadow-lg space-y-6">
               <h2 className="text-3xl sm:text-4xl font-semibold text-white">İletişime Geçin</h2>
               <p className="text-gray-400">
@@ -99,8 +98,6 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-
-            {/* Right side: Google Map iframe */}
             <div className="bg-gray-800 p-8 shadow-lg space-y-6">
               <h2 className="text-3xl sm:text-4xl font-semibold text-white">Bize Ulaşın</h2>
               <p className="text-gray-400">
@@ -119,8 +116,6 @@ const Contact = () => {
                   <p>(+90) 542 510 42 82</p>
                 </div>
               </div>
-
-              {/* Embed Google Maps iframe */}
               <div className="mt-8">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.179640574998!2d32.555686400000006!3d37.9028636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d085fc1b13876b%3A0x17bfdbd2297b6fe0!2sMGTORK%20-%20Bur%C3%A7lu%20V%20Kasnak%20-%20Konik%20Bur%C3%A7%20-%20Kaplinler%20-%20Konik%20Kilitler!5e0!3m2!1str!2str!4v1740043587417!5m2!1str!2str"
                   width="100%"
