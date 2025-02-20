@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaMobileAlt } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,25 +21,22 @@ const Contact = () => {
   return (
     <>
       <span id="contact"></span>
-      <div data-aos="zoom-in" className="dark:bg-black dark:text-white py-24">
-        <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-gray-800 py-8 px-6 rounded-lg shadow-lg">
-            <div className="col-span-2 sm:col-span-1 space-y-3">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white">
-                Alım Satım İhtiyaçlarınızı Birlikte Karşılayalım
-              </h1>
+      <div data-aos="zoom-in" className="py-24 dark:bg-black dark:text-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+            {/* Left side: Contact form */}
+            <div className="bg-gray-800 p-8 shadow-lg space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white">İletişime Geçin</h2>
               <p className="text-gray-400">
-                HYD POINT olarak, alım satım sektöründeki deneyimimizle
-                sizlere en iyi çözümleri sunmak için buradayız. İşletmenizin
-                büyümesine katkı sağlamak için bizimle iletişime geçin.
+                Alım satım ihtiyaçlarınızı bize bildirerek en iyi çözümü
+                alabilirsiniz. Size nasıl yardımcı olabiliriz?
               </p>
-            </div>
-            <div className="sm:col-span-1">
-              <form onSubmit={handleSubmit} className="space-y-4">
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="text-white block mb-2 font-semibold"
+                    className="text-white block mb-2 font-medium"
                   >
                     Adınız
                   </label>
@@ -48,7 +46,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-md text-black"
+                    className="w-full p-4 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     required
                     placeholder="Adınızı girin"
                   />
@@ -57,7 +55,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-white block mb-2 font-semibold"
+                    className="text-white block mb-2 font-medium"
                   >
                     E-posta
                   </label>
@@ -67,7 +65,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-md text-black"
+                    className="w-full p-4 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     required
                     placeholder="E-posta adresinizi girin"
                   />
@@ -76,7 +74,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="text-white block mb-2 font-semibold"
+                    className="text-white block mb-2 font-medium"
                   >
                     Mesajınız
                   </label>
@@ -85,21 +83,56 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-md text-black"
+                    className="w-full p-4 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     required
-                    placeholder="Alım satım ihtiyaçlarınızla ilgili mesajınızı buraya yazın"
+                    placeholder="Mesajınızı buraya yazın"
                   ></textarea>
                 </div>
 
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="inline-block font-semibold py-3 px-6 bg-primary text-white hover:bg-primary/80 duration-200 tracking-widest uppercase rounded-md"
+                    className="inline-block font-semibold py-3 px-6 bg-primary text-white hover:bg-primary/80 duration-200 tracking-widest uppercase rounded-md shadow-lg"
                   >
                     Mesajı Gönder
                   </button>
                 </div>
               </form>
+            </div>
+
+            {/* Right side: Google Map iframe */}
+            <div className="bg-gray-800 p-8 shadow-lg space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white">Bize Ulaşın</h2>
+              <p className="text-gray-400">
+                HYD POINT olarak alım satım sektöründe sizinle çalışmaktan
+                büyük mutluluk duyarız. Bizimle iletişime geçmek için aşağıdaki
+                numaraları kullanabilirsiniz.
+              </p>
+
+              <div className="text-white space-y-4">
+                <div className="flex items-center gap-3">
+                  <FaMobileAlt />
+                  <p>(+90) 533 600 03 62</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FaMobileAlt />
+                  <p>(+90) 542 510 42 82</p>
+                </div>
+              </div>
+
+              {/* Embed Google Maps iframe */}
+              <div className="mt-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.179640574998!2d32.555686400000006!3d37.9028636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d085fc1b13876b%3A0x17bfdbd2297b6fe0!2sMGTORK%20-%20Bur%C3%A7lu%20V%20Kasnak%20-%20Konik%20Bur%C3%A7%20-%20Kaplinler%20-%20Konik%20Kilitler!5e0!3m2!1str!2str!4v1740043587417!5m2!1str!2str"
+                  width="100%"
+                  height="350"
+                  frameBorder="0"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  aria-hidden="false"
+                  tabIndex="0"
+                  className="rounded-lg shadow-lg"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
