@@ -6,6 +6,15 @@ import { useNavigate } from "react-router-dom";
 
 const skillsData = [
   {
+    name: "Deneyimli Kişiler",
+    icon: (
+      <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
+    ),
+    link: "#",
+    description: "Deneyimli ekibimizle her zaman profesyonel ve güvenli hizmet sunuyoruz.",
+    aosDelay: "1000",
+  },
+  {
     name: "En İyi Fiyat",
     icon: (
       <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
@@ -22,16 +31,7 @@ const skillsData = [
     link: "#",
     description: "Alım satım işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştiriyoruz.",
     aosDelay: "500",
-  },
-  {
-    name: "Deneyimli Kişiler",
-    icon: (
-      <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
-    ),
-    link: "#",
-    description: "Deneyimli ekibimizle her zaman profesyonel ve güvenli hizmet sunuyoruz.",
-    aosDelay: "1000",
-  },
+  }
 ];
 
 const Services = () => {
