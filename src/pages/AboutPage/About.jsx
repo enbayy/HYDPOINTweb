@@ -1,5 +1,5 @@
 import React from "react";
-import malzeme from "../../assets/malzeme.png";
+import malzeme from "../../assets/hyd-1.png";
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
               <img
                 src={malzeme}
                 alt="Company Image"
-                className="sm:scale-125 sm:-translate-x-11 max-h-[300px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
+                className="sm:scale-125 lg:scale-150 sm:-translate-x-11 max-h-[300px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
               />
             </div>
             <div>

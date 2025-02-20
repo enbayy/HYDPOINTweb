@@ -1,5 +1,5 @@
-import malzeme1 from "../../assets/hyd-1.png";
-import malzeme2 from "../../assets/hyd-1.png";
+import malzeme1 from "../../assets/malzeme.png";
+import malzeme2 from "../../assets/malzeme.png";
 import bgImage from "../../assets/fabrika.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +27,7 @@ const Hero = ({ theme }) => {
           <img
             src={theme === "dark" ? malzeme1 : malzeme2}
             alt="Company Image"
-            className="scale-150 sm:scale-150 md:scale-150 lg:scale-100 relative max-h-[500px] drop-shadow-[2px_20px_6px_rgba(0,0,0,0.50)]"
+            className="scale-150 sm:scale-150 md:scale-150 lg:scale-125 relative max-h-[500px] drop-shadow-[2px_20px_6px_rgba(0,0,0,0.50)]"
           />
         </div>
         <div className="space-y-5 order-2 sm:order-1 max-w-2xl">
