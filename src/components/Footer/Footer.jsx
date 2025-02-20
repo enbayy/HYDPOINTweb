@@ -52,7 +52,11 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-3 mt-3">
               <FaMobileAlt />
-              <p>(0332) 501 10 11</p>
+              <p>(+90) 533 600 03 62</p>
+            </div>
+            <div className="flex items-center gap-3 mt-3">
+              <FaMobileAlt />
+              <p>(+90) 542 510 42 82</p>
             </div>
             <div className="flex items-center gap-3 mt-6">
               <a href="#">
@@ -94,14 +98,15 @@ const Footer = () => {
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {[
-                    { title: "info@hydpoint.com", link: "mailto:info@hydpoint.com" },
-                    { title: "(0332) 501 10 11", link: "tel:+905551234567" },
-                  ].map((item) => (
+                    { title: "info@hydpoint.com" },
+                    { title: "(+90) 533 600 03 62" },
+                    { title: "(+90) 555 123 45 67" },
+                  ].map((item, index) => (
                     <li
-                      key={item.title}
+                      key={index}
                       className="space-x-1 text-gray-500 dark:text-gray-200"
                     >
-                      <p href={item.link} className="flex items-center gap-1">
+                      <p className="flex items-center gap-1">
                         <span>&#11162;</span>
                         <span>{item.title}</span>
                       </p>

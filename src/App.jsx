@@ -9,7 +9,6 @@ import AllProductList from "./pages/ProductPage/AllProductList.jsx";
 import About from "./pages/AboutPage/About.jsx";
 import Contact from "./pages/ContactPage/Contact.jsx";
 import Services from "./pages/ServicesPage/Services.jsx";
-import Testimonial from "./pages/TestimonialPage/Testimonial.jsx";
 import AboutDetail from "./pages/AboutPage/AboutDetailPage.jsx";
 import ProductDetail from "./pages/ProductPage/ProductDetail.jsx";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -48,7 +47,7 @@ const App = () => {
 
   return (
     <Router>
-       <ScrollToTop />
+      <ScrollToTop />
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
@@ -80,7 +79,7 @@ const App = () => {
             style={{ transition: "transform 0.3s ease-in-out" }}
           >
             <a
-              href="https://wa.me/905522312086"
+              href="https://wa.me/905336000362"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white p-4 rounded-full shadow-lg transition-transform"

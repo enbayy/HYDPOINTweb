@@ -29,7 +29,7 @@ const AboutDetail = () => {
                                     Sektördeki deneyimimiz ile geniş bir ürün yelpazesi ve stratejik çözümler sunarak, iş süreçlerinizi kolaylaştırıyor ve büyümenize katkı sağlıyoruz.
                                 </p>
 
-                                <div>
+                                <div className="space-y-2">
                                     <h2 className="text-2xl font-semibold" data-aos="fade-up">
                                         Vizyon ve Misyon
                                     </h2>
@@ -38,7 +38,7 @@ const AboutDetail = () => {
                                     </p>
                                 </div>
 
-                                <div>
+                                <div className="space-y-2">
                                     <h2 className="text-2xl font-semibold" data-aos="fade-up">
                                         Değerlerimiz
                                     </h2>
@@ -49,8 +49,7 @@ const AboutDetail = () => {
                                         <li>Sürdürülebilirlik</li>
                                     </ul>
                                 </div>
-
-                                <div>
+                                <div className="space-y-2">
                                     <h2 className="text-2xl font-semibold" data-aos="fade-up">
                                         Ekibimiz
                                     </h2>
@@ -58,8 +57,10 @@ const AboutDetail = () => {
                                         Ekibimiz, her biri alanında uzmanlaşmış profesyonellerden oluşuyor. Her bir çalışanımız, müşteri memnuniyetini ön planda tutarak, sürekli yenilikçi çözümler üretmektedir.
                                     </p>
                                 </div>
-
-                                <button data-aos="fade-up" className="button-outline">
+                                <button
+                                    data-aos="fade-up"
+                                    className="bg-primary hover:bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-primary-dark transition duration-300"
+                                >
                                     Hemen Başla
                                 </button>
                             </div>

@@ -16,7 +16,7 @@ const Book = () => {
   const pages = chunkArray(machineList, 4);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-gray-900 p-6 sm:p-8 lg:p-12">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 p-6 sm:p-8 lg:p-12">
       <div className="relative w-[600px] h-[700px] shadow-[10px_10px_30px_rgba(0,0,0,0.8)] dark:shadow-[15px_15px_40px_rgba(255,255,255,0.1)] rounded-2xl">
         <HTMLFlipBook
           width={550}

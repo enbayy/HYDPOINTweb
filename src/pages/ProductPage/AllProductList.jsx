@@ -2,10 +2,11 @@ import React from 'react';
 import Book from '../PageFlip';
 
 const AllProductList = () => {
-
     return (
-        <div className="container p-12 mt-12">
-            <Book />
+        <div className="bg-gray-100 min-h-screen">
+            <div className="container p-12 mt-12">
+                <Book />
+            </div>
         </div>
     );
 }
