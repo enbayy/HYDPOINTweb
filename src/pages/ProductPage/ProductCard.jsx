@@ -29,8 +29,7 @@ const ProductCard = ({ data }) => {
             <div className="space-y-2 text-center">
                 <h1 className="text-primary font-semibold">{data.name}</h1>
                 <p>{data.type} - {data.condition}</p>
-                <div className="flex justify-between items-center text-xl font-semibold">
-                    <p>{data.price}TL</p>
+                <div className="flex justify-center items-center text-xl font-semibold">
                     <button onClick={handleClick}>Detaylar</button>
                 </div>
             </div>

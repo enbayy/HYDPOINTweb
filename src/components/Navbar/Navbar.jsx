@@ -43,7 +43,7 @@ const Navbar = ({ theme, setTheme }) => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-800 dark:text-white transition-all duration-300">
       <div className="container py-1 md:py-0">
-        <div className="flex justify-between items-center p-2.5">
+        <div className="flex justify-between items-center p-2">
           <div className="relative">
             <a href="/">
               <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
@@ -56,7 +56,7 @@ const Navbar = ({ theme, setTheme }) => {
                   <Link
                     to={link}
                     className={`text-lg font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
-                      ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-gray-700 hover:text-primary hover:border-b-4 hover:border-primary"}`}
+                      ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"}`}
                   >
                     {name}
                   </Link>

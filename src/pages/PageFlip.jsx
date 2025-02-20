@@ -4,6 +4,7 @@ import ProductCard from "./ProductPage/ProductCard";
 import { machineList } from "../data/ProductData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import hyd from '../assets/HYDPOINT3.png';
+import { useNavigate } from "react-router-dom";
 
 const chunkArray = (arr, size) => {
   return arr.reduce((acc, _, i) => {
@@ -14,10 +15,15 @@ const chunkArray = (arr, size) => {
 
 const Book = () => {
   const pages = chunkArray(machineList, 4);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/iletisim")
+  }
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 p-6 sm:p-8 lg:p-12">
-      <div className="relative w-[600px] h-[700px] shadow-[0px_0px_15px_rgba(0,0,0,1)] dark:shadow-[0px_0px_15px_rgba(255,255,255,0.2)] rounded-2xl transition-shadow duration-500 ease-in-out">
+      <div data-aos="zoom-in" className="relative w-[600px] h-[700px] shadow-[0px_0px_15px_rgba(0,0,0,1)] dark:shadow-[0px_0px_15px_rgba(255,255,255,0.2)] rounded-2xl transition-shadow duration-500 ease-in-out">
         <HTMLFlipBook
           width={550}
           height={650}
@@ -67,8 +73,13 @@ const Book = () => {
               alt="Takip Edin"
               className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-auto object-contain p-4 bg-transparent border dark:p-4 rounded-3xl"
             />
-            <div className="relative z-10 text-center">
-              <p className="text-black dark:text-white text-3xl sm:text-4xl md:text-4xl font-serif">Daha fazla ürün için bizi takip edin! 🚀</p>
+            <div className="relative flex flex-col z-10 text-center sm:text-left p-1 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+              <p className="text-black text-center dark:text-white text-3xl sm:text-4xl md:text-4xl font-sans px-6">
+                Daha fazlası için iletişime geçin. <br />
+                <button onClick={handleClick} className="button-outline mt-10">
+                  <p className="font-sans text-base">İletişime Geç</p>
+                </button>
+              </p>
             </div>
           </div>
         </HTMLFlipBook>

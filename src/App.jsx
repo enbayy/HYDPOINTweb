@@ -1,27 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./pages/HeroPage/Hero.jsx";
 import Footer from "./components/Footer/Footer";
-import AllProductList from "./pages/ProductPage/AllProductList.jsx";
-import About from "./pages/AboutPage/About.jsx";
-import Contact from "./pages/ContactPage/Contact.jsx";
-import Services from "./pages/ServicesPage/Services.jsx";
-import AboutDetail from "./pages/AboutPage/AboutDetailPage.jsx";
-import ProductDetail from "./pages/ProductPage/ProductDetail.jsx";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import Book from "./pages/PageFlip.jsx";
 import ScrollToTop from "./pages/ScrollToTop.js";
 
+const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
+const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
+const About = lazy(() => import("./pages/AboutPage/About.jsx"));
+const Contact = lazy(() => import("./pages/ContactPage/Contact.jsx"));
+const Services = lazy(() => import("./pages/ServicesPage/Services.jsx"));
+const AboutDetail = lazy(() => import("./pages/AboutPage/AboutDetailPage.jsx"));
+const ProductDetail = lazy(() => import("./pages/ProductPage/ProductDetail.jsx"));
+const Book = lazy(() => import("./pages/PageFlip.jsx"));
+
 const App = () => {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [showSocialIcons, setShowSocialIcons] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const element = document.documentElement;
@@ -51,18 +50,25 @@ const App = () => {
       <ScrollToTop />
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
         <Navbar theme={theme} setTheme={setTheme} />
-        <Routes>
-          <Route path="/" element={<>
-            <Hero theme={theme} />
-            <About />
-            <Services />
-            <Book />
-          </>} />
-          <Route path="/urunler" element={<AllProductList />} />
-          <Route path="/urunler/detay/:id" element={<ProductDetail />} />
-          <Route path="/hakkimizda" element={<AboutDetail />} />
-          <Route path="/iletisim" element={<Contact />} />
-        </Routes>
+        <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero theme={theme} />
+                  <About />
+                  <Services />
+                  <Book />
+                </>
+              }
+            />
+            <Route path="/urunler" element={<AllProductList />} />
+            <Route path="/urunler/detay/:id" element={<ProductDetail />} />
+            <Route path="/hakkimizda" element={<AboutDetail />} />
+            <Route path="/iletisim" element={<Contact />} />
+          </Routes>
+        </Suspense>
         <Footer />
         <div className="fixed bottom-0 right-0 z-30">
           <button

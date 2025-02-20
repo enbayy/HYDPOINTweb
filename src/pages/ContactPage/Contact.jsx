@@ -24,7 +24,7 @@ const Contact = () => {
       <div data-aos="zoom-in" className="py-24 dark:bg-black dark:text-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
-            <div className="bg-gray-800 p-8 shadow-lg space-y-6">
+            <div className="bg-gray-800 dark:bg-gray-900 p-8 shadow-lg space-y-6">
               <h2 className="text-3xl sm:text-4xl font-semibold text-white">İletişime Geçin</h2>
               <p className="text-gray-400">
                 Alım satım ihtiyaçlarınızı bize bildirerek en iyi çözümü
@@ -98,7 +98,7 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-            <div className="bg-gray-800 p-8 shadow-lg space-y-6">
+            <div className="bg-gray-800 dark:bg-gray-900 p-8 shadow-lg space-y-6">
               <h2 className="text-3xl sm:text-4xl font-semibold text-white">Bize Ulaşın</h2>
               <p className="text-gray-400">
                 HYD POINT olarak alım satım sektöründe sizinle çalışmaktan
