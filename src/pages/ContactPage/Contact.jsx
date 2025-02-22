@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <>
       <span id="contact"></span>
-      <div data-aos="zoom-in" className="py-24 dark:bg-black dark:text-white">
+      <div data-aos="zoom-in" className="py-8 dark:bg-black dark:text-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
             <div className="bg-gray-800 dark:bg-gray-900 p-8 shadow-lg space-y-6">

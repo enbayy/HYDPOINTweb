@@ -11,8 +11,9 @@ const skillsData = [
       <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
     ),
     link: "#",
-    description: "Deneyimli ekibimizle her zaman profesyonel ve güvenli hizmet sunuyoruz.",
-    aosDelay: "1000",
+    description:
+      "Deneyimli ekibimizle her zaman profesyonel ve güvenli hizmet sunuyoruz.",
+    aosDelay: "0",
   },
   {
     name: "En İyi Fiyat",
@@ -21,7 +22,7 @@ const skillsData = [
     ),
     link: "#",
     description: "Pazarlama çözümlerimizle en uygun fiyatları sunuyoruz.",
-    aosDelay: "0",
+    aosDelay: "500",
   },
   {
     name: "Hızlı ve Güvenli",
@@ -29,16 +30,18 @@ const skillsData = [
       <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "Alım satım işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştiriyoruz.",
-    aosDelay: "500",
-  }
+    description:
+      "Alım satım işlemlerinizi hızlı ve güvenli bir şekilde gerçekleştiriyoruz.",
+    aosDelay: "1000",
+  },
 ];
 
 const Services = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/iletisim")
-  }
+    navigate("/iletisim");
+  };
+
   return (
     <>
       <span id="about"></span>
@@ -58,14 +61,14 @@ const Services = () => {
                 key={skill.name}
                 data-aos="fade-up"
                 data-aos-delay={skill.aosDelay}
-                className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary duration-300 text-white hover:text-black rounded-lg"
+                className="card flex flex-col h-full text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary duration-300 text-white hover:text-black rounded-lg"
               >
                 <div className="grid place-items-center">{skill.icon}</div>
                 <h1 className="text-2xl font-bold">{skill.name}</h1>
-                <p>{skill.description}</p>
+                <p className="flex-grow">{skill.description}</p>
                 <button
                   onClick={handleClick}
-                  className="inline-block text-lg font-semibold py-3 text-primary group-hover:text-black duration-300"
+                  className="mt-auto inline-block text-lg font-semibold py-3 text-primary group-hover:text-black duration-300 underline-offset-1"
                 >
                   Daha Fazla Bilgi
                 </button>
