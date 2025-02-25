@@ -82,10 +82,11 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full p-4 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full p-4 h-40 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     required
                     placeholder="Mesajınızı buraya yazın"
-                  ></textarea>
+                  >
+                  </textarea>
                 </div>
 
                 <div className="text-center">

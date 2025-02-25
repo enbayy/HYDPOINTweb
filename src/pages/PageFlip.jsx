@@ -49,20 +49,17 @@ const Book = () => {
               <h2 className="text-xl font-semibold text-center text-black dark:text-white mb-4">
                 Sayfa {index + 1}
               </h2>
-              <div className="flex flex-wrap justify-center gap-4 px-2 xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-2 gap-6 place-items-stretch">
                 {products.map((data) => (
-                  <div
-                    key={data.id}
-                    className="flex justify-center w-2/5 sm:w-2/3 md:w-2/5 lg:w-1/4 xl:w-full"
-                  >
-                    <ProductCard data={data} className="h-96" />
+                  <div key={data.id} className="flex justify-center w-full">
+                    <ProductCard data={data} className="h-96 w-full" />
                   </div>
                 ))}
               </div>
-              <div className="absolute top-2 left-2 text-black dark:text-white hover:text-gray-700 cursor-pointer">
+              <div className="absolute top-6 left-2 text-black dark:text-white hover:text-gray-700 cursor-pointer">
                 <ChevronLeft size={32} />
               </div>
-              <div className="absolute top-2 right-2 text-black dark:text-white hover:text-gray-700 cursor-pointer">
+              <div className="absolute top-6 right-2 text-black dark:text-white hover:text-gray-700 cursor-pointer">
                 <ChevronRight size={32} />
               </div>
             </div>

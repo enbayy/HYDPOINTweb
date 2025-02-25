@@ -16,7 +16,7 @@ const Hero = ({ theme }) => {
         alt="HYD POINT"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 w-full h-full bg-black opacity-70"></div>
+      <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
       <div className="container flex flex-col sm:flex-row items-center justify-center relative z-10 text-center sm:text-left w-full px-4">
         <div
           data-aos="zoom-in"

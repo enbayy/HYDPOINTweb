@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const FooterLinks = [
   {
@@ -87,7 +88,7 @@ const Footer = () => {
                         to={link.link}
                         className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200 flex items-center"
                       >
-                        <span>&#11162;</span>
+                        <IoMdArrowDropright />
                         <span>{link.title}</span>
                       </Link>
                     </li>
@@ -111,7 +112,7 @@ const Footer = () => {
                       className="space-x-1 text-gray-500 dark:text-gray-200"
                     >
                       <p className="flex items-center gap-1">
-                        <span>&#11162;</span>
+                        <IoMdArrowDropright />
                         <span>{item.title}</span>
                       </p>
                     </li>
