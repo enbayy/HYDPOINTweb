@@ -9,6 +9,8 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ScrollToTop from "./pages/ScrollToTop.js";
+import CTASection from "./pages/ctaPage/cta.jsx";
+import ServicesPage from "./pages/ServicesListPage/ServicesList.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -58,8 +60,10 @@ const App = () => {
                 <>
                   <Hero theme={theme} />
                   <About />
-                  <Services />
+                  <ServicesPage />
                   <Book />
+                  <Services />
+                  <CTASection />
                 </>
               }
             />
