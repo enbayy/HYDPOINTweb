@@ -3,7 +3,7 @@ import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
-import HYDPOINT from '../../assets/HYDPOINTENDUSTRIYEL.png';
+import HYDPOINT from '../../assets/hydLogo2.png';
 
 export const Navlinks = [
   {
@@ -46,7 +46,7 @@ const Navbar = ({ theme, setTheme }) => {
         <div className="flex justify-between items-center p-1">
           <div className="relative">
             <a href="/">
-              <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 object-contain cursor-pointer" />
+              <img src={HYDPOINT} alt="HYDPOINT" className="w-48 h-16 p-1 object-contain cursor-pointer" />
             </a>
           </div>
           <nav className="hidden lg:flex">

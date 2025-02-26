@@ -3,7 +3,7 @@ import HTMLFlipBook from "react-pageflip";
 import ProductCard from "./ProductPage/ProductCard";
 import { machineList } from "../data/ProductData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import hyd from '../assets/HYDPOINT3.png';
+import hyd from '../assets/hydLogo2.png';
 import { useNavigate } from "react-router-dom";
 
 const chunkArray = (arr, size) => {
