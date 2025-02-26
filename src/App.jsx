@@ -60,7 +60,6 @@ const App = () => {
                 <>
                   <Hero theme={theme} />
                   <About />
-                  <ServicesPage />
                   <Book />
                   <Services />
                   <CTASection />

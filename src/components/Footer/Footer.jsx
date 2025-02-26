@@ -86,7 +86,7 @@ const Footer = () => {
                     <li key={link.title}>
                       <Link
                         to={link.link}
-                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200 flex items-center"
+                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-black dark:text-gray-200 flex items-center"
                       >
                         <IoMdArrowDropright />
                         <span>{link.title}</span>
@@ -109,7 +109,7 @@ const Footer = () => {
                   ].map((item, index) => (
                     <li
                       key={index}
-                      className="space-x-1 text-gray-500 dark:text-gray-200"
+                      className="space-x-1 text-black dark:text-gray-200"
                     >
                       <p className="flex items-center gap-1">
                         <IoMdArrowDropright />
@@ -125,7 +125,7 @@ const Footer = () => {
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
                   Konum
                 </h1>
-                <div className="text-gray-500 dark:text-gray-200">
+                <div className="text-black dark:text-gray-200">
                   <div className="flex items-center gap-3">
                     <FaLocationArrow />
                     <p>Fevziçakmak, Hüdai Cd. 131 DB, 42060 Karatay/Konya</p>

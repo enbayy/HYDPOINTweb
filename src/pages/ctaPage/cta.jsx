@@ -18,7 +18,7 @@ const CTASection = () => {
                 className="bg-primary text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-primary/80 transition-all"
                 onClick={handleClick}
             >
-                Hizmetlerimizi Keşfedin
+                Bize Ulaşın
             </button>
         </div>
     );
