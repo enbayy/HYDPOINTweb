@@ -1,5 +1,5 @@
-import malzeme1 from "../../assets/malzeme.png";
-import malzeme2 from "../../assets/malzeme.png";
+import malzeme1 from "../../assets/hero.png";
+import malzeme2 from "../../assets/hero.png";
 import bgImage from "../../assets/fabrika.jpg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ const Hero = ({ theme }) => {
     <div className="relative dark:bg-black dark:text-white duration-300 min-h-screen flex items-center py-6 sm:py-10">
       <img
         src={bgImage}
-        alt="HYD POINT"
+        alt="HYDPOINT"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 w-full h-full bg-black opacity-60"></div>

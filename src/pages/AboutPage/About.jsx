@@ -1,5 +1,5 @@
 import React from "react";
-import malzeme from "../../assets/malzeme.png";
+import malzeme from "../../assets/hydLogo.png";
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
             <div data-aos="slide-right" data-aos-duration="1500">
               <img
                 src={malzeme}
-                alt="HYD Point"
+                alt="HYDPOINT"
                 className="sm:scale-125 sm:-translate-x-11 max-h-[400px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
               />
             </div>

@@ -2,8 +2,8 @@ import React, { useEffect, useState, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -63,6 +63,7 @@ const App = () => {
                   <Book />
                   <Services />
                   <CTASection />
+                  <Footer />
                 </>
               }
             />
@@ -72,7 +73,7 @@ const App = () => {
             <Route path="/iletisim" element={<Contact />} />
           </Routes>
         </Suspense>
-        <Footer />
+
         <div className="fixed bottom-0 right-0 z-30">
           <button
             onClick={() => {

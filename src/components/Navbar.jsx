@@ -3,7 +3,7 @@ import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
-import HYDPOINT from '../../assets/hydLogo2.png';
+import HYDPOINT from '../assets/hydLogo2.png';
 
 export const Navlinks = [
   {

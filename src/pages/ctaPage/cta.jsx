@@ -7,7 +7,7 @@ const CTASection = () => {
         navigate("/iletisim")
     }
     return (
-        <div className="text-center py-16 bg-black">
+        <div className="text-center py-16 bg-black dark:bg-gray-900">
             <h2 className="text-4xl font-bold text-white mb-4">
                 Pazarlama Çözümlerimizle Tanışın
             </h2>
