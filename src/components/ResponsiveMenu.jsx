@@ -25,9 +25,9 @@ const ResponsiveMenu = ({ showMenu, closeMenu }) => {
         <Link
           to="/iletisim"
           onClick={closeMenu}
-          className="block bg-primary text-black px-4 py-2 rounded-lg text-center hover:bg-yellow-500 transition"
+          className="block text-lg font-semibold bg-primary text-black px-4 py-2 rounded-lg text-center hover:bg-yellow-500 transition"
         >
-          Hızlı Teklif Al
+          Teklif Al
         </Link>
       </div>
     </div>

@@ -26,8 +26,8 @@ const Hero = ({ theme }) => {
           transition={{ duration: 1 }}
           className="space-y-4 sm:space-y-6 max-w-xl text-center lg:text-left"
         >
-          <p className="text-primary text-2xl sm:text-3xl font-semibold tracking-wide">
-            Kolay ve Hızlı
+          <p className="text-primary text-2xl sm:text-3xl font-bold tracking-wide">
+            KOLAY VE HIZLI
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl text-white font-bold font-serif drop-shadow-lg">
             HYD POINT ENDUSTRIYEL

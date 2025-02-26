@@ -41,7 +41,7 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
-    <div className="sticky top-0 left-0 w-full z-50 shadow-lg bg-transparent dark:bg-black dark:text-white transition-all duration-300">
+    <div className="sticky top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-black dark:text-white transition-all duration-300">
       <div className="container py-1 md:py-0">
         <div className="flex justify-between items-center p-1">
           <div className="relative">
@@ -64,9 +64,9 @@ const Navbar = ({ theme, setTheme }) => {
               ))}
               <Link
                 to="/iletisim"
-                className="bg-primary text-white px-6 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition-colors duration-300"
+                className="text-lg font-semibold bg-primary text-white px-6 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition-colors duration-300"
               >
-                Hızlı Teklif Al
+                Teklif Al
               </Link>
               {theme === "dark" ? (
                 <BiSolidSun

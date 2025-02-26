@@ -4,7 +4,7 @@ import malzeme from "../../assets/hydLogo.png";
 const About = () => {
   return (
     <section id="about-detail">
-      <div className="bg-gray-100 dark:bg-dark py-12 sm:grid sm:place-items-center duration-300">
+      <div className="bg-white dark:bg-dark py-12 sm:grid sm:place-items-center duration-300">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
             <div data-aos="slide-right" data-aos-duration="1500">

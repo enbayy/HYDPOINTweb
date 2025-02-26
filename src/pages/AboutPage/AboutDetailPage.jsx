@@ -7,7 +7,7 @@ const AboutDetail = () => {
             <div className="dark:bg-dark bg-slate-100 sm:min-h-[800px] sm:grid sm:place-items-center duration-300">
                 <div className="container">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
-                        <div data-aos="slide-right" data-aos-duration="1500">
+                        <div data-aos="zoom-in">
                             <img
                                 src={malzeme}
                                 alt="Company Image"
@@ -15,34 +15,34 @@ const AboutDetail = () => {
                             />
                         </div>
                         <div>
-                            <div className="space-y-6 sm:p-16 pb-6">
+                            <div data-aos="zoom-in" className="space-y-6 sm:p-16 pb-6">
                                 <h1
-                                    data-aos="fade-up"
+
                                     className="text-3xl sm:text-4xl font-bold font-sans"
                                 >
                                     Hakkımızda
                                 </h1>
-                                <p data-aos="fade-up" className="leading-8 tracking-wide">
+                                <p className="leading-8 tracking-wide">
                                     HYD Point, alım satım işlemlerinde hızlı, güvenilir ve kaliteli çözümler sunan bir pazarlama şirketidir. İş ortaklarımıza en iyi ticaret deneyimini sağlamayı hedefliyoruz.
                                 </p>
-                                <p data-aos="fade-up">
+                                <p>
                                     Sektördeki deneyimimiz ile geniş bir ürün yelpazesi ve stratejik çözümler sunarak, iş süreçlerinizi kolaylaştırıyor ve büyümenize katkı sağlıyoruz.
                                 </p>
 
                                 <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold" data-aos="fade-up">
+                                    <h2 className="text-2xl font-semibold">
                                         Vizyon ve Misyon
                                     </h2>
-                                    <p data-aos="fade-up" className="leading-8">
+                                    <p className="leading-8">
                                         Vizyonumuz, sektördeki lider konumumuzu pekiştirerek, müşterilerimize her zaman değer katmak ve sürdürülebilir büyümeyi sağlamak. Misyonumuz ise, güvenilir ve kaliteli hizmet anlayışımızla ticaret dünyasında kalıcı bir iz bırakmaktır.
                                     </p>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold" data-aos="fade-up">
+                                    <h2 className="text-2xl font-semibold">
                                         Değerlerimiz
                                     </h2>
-                                    <ul className="list-disc pl-6" data-aos="fade-up">
+                                    <ul className="list-disc pl-6">
                                         <li>Güvenilirlik</li>
                                         <li>Yenilikçilik</li>
                                         <li>Topluma Katkı</li>
@@ -50,7 +50,7 @@ const AboutDetail = () => {
                                     </ul>
                                 </div>
                                 <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold" data-aos="fade-up">
+                                    <h2 className="text-2xl font-semibold">
                                         Ekibimiz
                                     </h2>
                                     <p data-aos="fade-up" className="leading-8">
