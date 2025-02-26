@@ -19,12 +19,12 @@ const Hero = ({ theme }) => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 w-full h-full bg-black opacity-60"></div>
-      <div className="container flex flex-col items-center justify-between relative z-10 w-full px-6 sm:px-10">
+      <div className="container flex flex-col lg:flex-row items-center justify-between relative z-10 w-full px-6 sm:px-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="space-y-4 sm:space-y-6 max-w-xl text-center sm:text-left"
+          className="space-y-4 sm:space-y-6 max-w-xl text-center lg:text-left"
         >
           <p className="text-primary text-2xl sm:text-3xl font-semibold tracking-wide">
             Kolay ve Hızlı
@@ -48,7 +48,7 @@ const Hero = ({ theme }) => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="flex justify-center w-full max-w-sm sm:max-w-md lg:max-w-lg mt-6"
+          className="flex justify-center w-full max-w-sm sm:max-w-md lg:max-w-lg mt-6 lg:mt-0"
         >
           <img
             src={theme === "dark" ? malzeme1 : malzeme2}
