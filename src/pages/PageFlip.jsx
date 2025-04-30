@@ -22,7 +22,7 @@ const Book = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 p-6 sm:p-8 lg:p-12">
+    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-gray-900 p-6 sm:p-8 lg:p-12">
       <div data-aos="zoom-in" className="relative w-[600px] h-[700px] shadow-[0px_0px_15px_rgba(0,0,0,1)] dark:shadow-[0px_0px_15px_rgba(255,255,255,0.2)] rounded-2xl transition-shadow duration-500 ease-in-out">
         <HTMLFlipBook
           width={550}
