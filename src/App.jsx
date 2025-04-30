@@ -40,7 +40,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="sync">
+    <AnimatePresence mode="wait">
       <Routes key={location.pathname} location={location}>
         <Route
           path="/"
