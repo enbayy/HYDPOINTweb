@@ -7,10 +7,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./pages/ScrollToTop.js";
 import Loader from "./components/Loader.jsx";
-import { RiWhatsappFill } from "react-icons/ri";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -33,6 +30,10 @@ const PageTransition = ({ children }) => {
       {children}
     </motion.div>
   );
+};
+
+const handleClick = () => {
+  window.open('https://wa.me/905522312086', '_blank');
 };
 
 const AnimatedRoutes = () => {
@@ -65,8 +66,6 @@ const AnimatedRoutes = () => {
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-  const [showSocialIcons, setShowSocialIcons] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
   const element = document.documentElement;
 
   useEffect(() => {
@@ -98,52 +97,11 @@ const App = () => {
           <AnimatedRoutes />
         </Suspense>
         <div className="fixed bottom-0 right-0 z-30">
-          <button
-            onClick={() => {
-              setShowSocialIcons(!showSocialIcons);
-              setIsOpen(!isOpen);
-            }}
-            className="bg-white text-black hover:bg-primary hover:text-white p-4 rounded-full shadow-lg mb-2 transition-transform"
-          >
-            {isOpen ? <IoIosArrowBack size={20} /> : <IoIosArrowForward size={20} />}
-          </button>
           <div
-            className={`flex flex-col space-y-2 transition-transform ${showSocialIcons ? "translate-x-0" : "translate-x-full"
-              }`}
-            style={{ transition: "transform 0.3s ease-in-out" }}
+            className="fixed bottom-2 right-2 bg-[#25D366] p-3 rounded-full shadow-lg cursor-pointer transition duration-300 hover:bg-[#128C7E] z-50"
+            onClick={handleClick}
           >
-            <a
-              href="https://wa.me/905336000362"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 text-white p-4 rounded-full shadow-lg transition-transform hover:bg-primary"
-            >
-              <RiWhatsappFill size={20} />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-pink-500 text-white p-4 rounded-full shadow-lg transition-transform hover:bg-primary"
-            >
-              <FaInstagram size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:bg-primary"
-            >
-              <FaLinkedin size={20} />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black text-white p-4 rounded-full shadow-lg transition-transform hover:bg-primary"
-            >
-              <FaSquareXTwitter size={20} />
-            </a>
+            <FaWhatsapp size={35} color="white" />
           </div>
         </div>
       </div>

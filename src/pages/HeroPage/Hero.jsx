@@ -1,6 +1,5 @@
-import malzeme1 from "../../assets/hero.png";
-import malzeme2 from "../../assets/hero.png";
-import bgImage from "../../assets/fabrika.jpg";
+import hydlogo4 from "../../assets/hydlogo4.png";
+import hydlogo5 from "../../assets/hydlogo4.png";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -12,13 +11,7 @@ const Hero = ({ theme }) => {
   };
 
   return (
-    <div className="relative dark:bg-black dark:text-white duration-300 min-h-screen flex items-center py-6 sm:py-10">
-      <img
-        src={bgImage}
-        alt="HYDPOINT"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 w-full h-full bg-black opacity-60"></div>
+    <div className="relative dark:bg-black dark:text-white duration-300 min-h-screen flex items-center">
       <div className="container flex flex-col lg:flex-row items-center justify-between relative z-10 w-full px-6 sm:px-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -29,10 +22,10 @@ const Hero = ({ theme }) => {
           <p className="text-primary text-2xl sm:text-3xl font-bold tracking-wide">
             KOLAY VE HIZLI
           </p>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl text-white font-bold font-serif drop-shadow-lg">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl text-black font-bold font-serif drop-shadow-lg">
             HYD POINT ENDUSTRIYEL
           </h1>
-          <p className="text-white text-base sm:text-lg leading-relaxed">
+          <p className="text-black text-base sm:text-lg leading-relaxed">
             HYD Point, alım satım işlemlerinizi hızlı ve güvenli bir şekilde yapmanızı sağlar. Yüksek kaliteli hizmet ve geniş ürün yelpazesi ile sizlere en iyi pazarlama çözümlerini sunuyoruz.
           </p>
           <motion.button
@@ -51,9 +44,9 @@ const Hero = ({ theme }) => {
           className="flex justify-center w-full max-w-sm sm:max-w-md lg:max-w-lg mt-6 lg:mt-0"
         >
           <img
-            src={theme === "dark" ? malzeme1 : malzeme2}
+            src={theme === "dark" ? hydlogo4 : hydlogo5}
             alt="Company Image"
-            className="scale-100 sm:scale-110 max-h-[350px] sm:max-h-[450px] drop-shadow-2xl"
+            className="sm:scale-125 sm:-translate-x-11 max-h-[400px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
           />
         </motion.div>
       </div>
