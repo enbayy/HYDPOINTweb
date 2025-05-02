@@ -8,6 +8,7 @@ import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./pages/ScrollToTop.js";
 import Loader from "./components/Loader.jsx";
 import { FaWhatsapp } from 'react-icons/fa';
+import NavbarUp from "./components/NavbarUp.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -92,6 +93,7 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+        <NavbarUp />
         <Navbar theme={theme} setTheme={setTheme} />
         <Suspense fallback={<Loader />}>
           <AnimatedRoutes />
