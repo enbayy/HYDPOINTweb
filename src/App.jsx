@@ -9,6 +9,7 @@ import ScrollToTop from "./pages/ScrollToTop.js";
 import Loader from "./components/Loader.jsx";
 import { FaWhatsapp } from 'react-icons/fa';
 import NavbarUp from "./components/NavbarUp.jsx";
+import ImageSlider from "./pages/ImageSlider.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -49,6 +50,7 @@ const AnimatedRoutes = () => {
             <PageTransition>
               <Hero />
               <About />
+              <ImageSlider />
               <Book />
               <Services />
               <CTASection />

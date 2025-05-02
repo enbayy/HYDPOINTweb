@@ -11,15 +11,15 @@ const Hero = ({ theme }) => {
   };
 
   return (
-    <div className="relative dark:bg-black dark:text-white duration-300 min-h-screen flex items-center">
-      <div className="container flex flex-col lg:flex-row items-center justify-between relative z-10 w-full px-6 sm:px-10">
+    <div className="container relative dark:bg-black dark:text-white duration-300 flex items-center py-28">
+      <div className="flex flex-col lg:flex-row items-center justify-between relative z-10 w-full px-6 sm:px-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="space-y-4 sm:space-y-6 max-w-xl text-center lg:text-left"
         >
-          <p className="text-primary text-2xl sm:text-3xl font-bold tracking-wide">
+          <p className="text-primary text-2xl sm:text-3xl font-bold font-serif tracking-wide">
             KOLAY VE HIZLI
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl text-black font-bold font-serif drop-shadow-lg">
@@ -32,7 +32,7 @@ const Hero = ({ theme }) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleClick}
-            className="rounded-md bg-primary hover:bg-primary/80 transition duration-500 py-2 sm:py-3 px-6 sm:px-8 text-black font-medium shadow-lg"
+            className="rounded-md bg-primary hover:bg-primary/80 transition duration-500 py-2 sm:py-3 px-6 sm:px-8 text-white font-medium shadow-lg"
           >
             Hemen Başla
           </motion.button>

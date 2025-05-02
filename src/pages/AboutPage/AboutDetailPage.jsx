@@ -4,7 +4,7 @@ import malzeme from "../../assets/malzeme.png";
 const AboutDetail = () => {
     return (
         <section id="about-detail">
-            <div className="dark:bg-dark bg-slate-100 sm:min-h-[800px] sm:grid sm:place-items-center duration-300">
+            <div className="dark:bg-dark bg-white sm:min-h-[800px] sm:grid sm:place-items-center duration-300">
                 <div className="container">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
                         <div data-aos="zoom-in">
