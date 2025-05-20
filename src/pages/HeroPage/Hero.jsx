@@ -11,8 +11,8 @@ const Hero = ({ theme }) => {
   };
 
   return (
-    <div className="container relative dark:bg-black dark:text-white duration-300 flex items-center py-28">
-      <div className="flex flex-col lg:flex-row items-center justify-between relative z-10 w-full px-6 sm:px-10">
+    <div className="container relative dark:bg-black dark:text-white duration-300 flex items-center py-8 sm:py-12 md:py-32">
+      <div className="flex flex-col lg:flex-row items-center justify-between relative z-10 w-full px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -22,7 +22,7 @@ const Hero = ({ theme }) => {
           <p className="text-primary text-2xl sm:text-3xl font-bold font-serif tracking-wide">
             KOLAY VE HIZLI
           </p>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl text-black font-bold font-serif drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-black font-bold font-serif drop-shadow-lg">
             HYD POINT ENDUSTRIYEL
           </h1>
           <p className="text-black text-base sm:text-lg leading-relaxed">
@@ -46,7 +46,7 @@ const Hero = ({ theme }) => {
           <img
             src={theme === "dark" ? hydlogo4 : hydlogo5}
             alt="Company Image"
-            className="sm:scale-125 sm:-translate-x-11 max-h-[400px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
+            className="sm:scale-125 sm:-translate-x-11 max-h-[350px] sm:max-h-[400px] lg:max-h-[450px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
           />
         </motion.div>
       </div>

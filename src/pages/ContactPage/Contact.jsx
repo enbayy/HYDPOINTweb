@@ -24,9 +24,9 @@ const Contact = () => {
       <div data-aos="zoom-in" className="py-8 dark:bg-black dark:text-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
-            <div className="bg-gray-800 dark:bg-gray-900 p-8 shadow-lg space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white">İletişime Geçin</h2>
-              <p className="text-gray-400">
+            <div className="p-8 space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-black">İletişime Geçin</h2>
+              <p className="text-gray-500">
                 Alım satım ihtiyaçlarınızı bize bildirerek en iyi çözümü
                 alabilirsiniz. Size nasıl yardımcı olabiliriz?
               </p>
@@ -35,7 +35,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="text-white block mb-2 font-medium"
+                    className="text-black block mb-2 font-medium"
                   >
                     Adınız
                   </label>
@@ -54,7 +54,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-white block mb-2 font-medium"
+                    className="text-black block mb-2 font-medium"
                   >
                     E-posta
                   </label>
@@ -73,7 +73,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="text-white block mb-2 font-medium"
+                    className="text-black block mb-2 font-medium"
                   >
                     Mesajınız
                   </label>
@@ -99,18 +99,18 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-            <div className="bg-gray-800 dark:bg-gray-900 p-8 shadow-lg space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white">Bize Ulaşın</h2>
-              <p className="text-gray-400">
+            <div className="p-8 space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-black">Bize Ulaşın</h2>
+              <p className="text-gray-500">
                 HYD POINT olarak alım satım sektöründe sizinle çalışmaktan büyük mutluluk duyarız.
                 Bizimle iletişime geçmek için aşağıdaki numaraları kullanabilirsiniz.
               </p>
 
-              <p className="text-white">
+              <p className="text-black">
                 Daha fazla bilgi almak için aşağıdaki numaralardan bize ulaşabilirsiniz.
               </p>
 
-              <div className="text-white space-y-4">
+              <div className="text-black space-y-4">
                 <div className="flex items-center gap-3">
                   <FaMobileAlt />
                   <p>(+90) 533 600 03 62</p>
