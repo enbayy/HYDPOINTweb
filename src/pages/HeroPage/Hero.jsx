@@ -58,7 +58,7 @@ const HeroSection = () => {
       </motion.svg>
 
       <motion.div
-        className="text-center max-w-3xl flex flex-col gap-6 text-[#1e3a8a] font-sans z-10"
+        className="text-center max-w-3xl flex flex-col gap-6 text-[#1e3a8a] font-sans z-10 mb-16"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
