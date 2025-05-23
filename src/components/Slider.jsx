@@ -31,7 +31,7 @@ const SliderComponent = () => {
                 <Slider {...settings}>
                     {sliderImages.map((img, index) => (
                         <div key={index} className="w-full">
-                            <div className="aspect-[16/9] w-full border border-black">
+                            <div className="aspect-[16/9] w-full">
                                 <img
                                     src={img}
                                     alt={`Slide ${index + 1}`}
