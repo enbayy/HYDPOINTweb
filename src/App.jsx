@@ -8,8 +8,12 @@ import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./pages/ScrollToTop.js";
 import Loader from "./components/Loader.jsx";
 import { FaWhatsapp } from 'react-icons/fa';
-import NavbarUp from "./components/NavbarUp.jsx";
 import ContactHome from "./pages/ContactHome.jsx";
+import HidrolikPage from "./pages/Urunler/HidrolikPage.jsx";
+import PnomatikPage from "./pages/Urunler/PnomatikPage.jsx";
+import SizdirmaPage from "./pages/Urunler/SizdirmaPage.jsx";
+import GucKaynaklariPage from "./pages/Urunler/GucKaynaklari.jsx";
+import Slider from "./components/Slider.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -34,10 +38,6 @@ const PageTransition = ({ children }) => {
   );
 };
 
-const handleClick = () => {
-  window.open('https://wa.me/905522312086', '_blank');
-};
-
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -48,6 +48,7 @@ const AnimatedRoutes = () => {
           path="/"
           element={
             <PageTransition>
+              <Slider />
               <Hero />
               <About />
               <Book />
@@ -61,6 +62,10 @@ const AnimatedRoutes = () => {
         <Route path="/urunler/detay/:id" element={<PageTransition><ProductDetail /></PageTransition>} />
         <Route path="/hakkimizda" element={<PageTransition><AboutDetail /></PageTransition>} />
         <Route path="/iletisim" element={<PageTransition><Contact /></PageTransition>} />
+        <Route path="/detail/hidrolik" element={<PageTransition><HidrolikPage /></PageTransition>} />
+        <Route path="/detail/pnomatik" element={<PageTransition><PnomatikPage /></PageTransition>} />
+        <Route path="/detail/sizdirma" element={<PageTransition><SizdirmaPage /></PageTransition>} />
+        <Route path="/detail/guc-kaynaklari" element={<PageTransition><GucKaynaklariPage /></PageTransition>} />
       </Routes>
       <Footer />
     </AnimatePresence>
@@ -95,18 +100,27 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
-        <NavbarUp />
         <Navbar theme={theme} setTheme={setTheme} />
         <Suspense fallback={<Loader />}>
           <AnimatedRoutes />
         </Suspense>
-        <div className="fixed bottom-0 right-0 z-30">
-          <div
-            className="fixed bottom-2 right-2 bg-[#25D366] p-3 rounded-full shadow-lg cursor-pointer transition duration-300 hover:bg-[#128C7E] z-50"
-            onClick={handleClick}
-          >
-            <FaWhatsapp size={35} color="white" />
-          </div>
+        <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-4">
+          {[
+            { numara: "+90 533 600 03 62", link: "https://wa.me/905336000362" },
+            { numara: "+90 542 510 42 82", link: "https://wa.me/905425104282" }
+          ].map(({ numara, link }) => (
+            <div
+              key={numara}
+              onClick={() => window.open(link, "_blank")}
+              className="flex items-center gap-3 bg-[#25D366] hover:bg-[#128C7E] transition transform hover:scale-105 cursor-pointer rounded-xl px-5 py-3 shadow-lg text-white font-semibold text-base select-none"
+              role="button"
+              tabIndex={0}
+              onKeyDown={e => { if (e.key === 'Enter') window.open(link, "_blank") }}
+            >
+              <FaWhatsapp size={28} />
+              <span>{numara}</span>
+            </div>
+          ))}
         </div>
       </div>
     </Router>
