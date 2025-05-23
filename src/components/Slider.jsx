@@ -26,12 +26,12 @@ const SliderComponent = () => {
     };
 
     return (
-        <div className="container w-full flex flex-col justify-center items-center ">
+        <div className="container w-full flex flex-col justify-center items-center py-8">
             <div className="w-full max-w-6xl">
                 <Slider {...settings}>
                     {sliderImages.map((img, index) => (
                         <div key={index} className="w-full">
-                            <div className="aspect-[16/9] w-full">
+                            <div className="aspect-[16/9] w-full border border-black">
                                 <img
                                     src={img}
                                     alt={`Slide ${index + 1}`}
