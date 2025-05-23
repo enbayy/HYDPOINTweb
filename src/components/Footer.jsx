@@ -9,6 +9,7 @@ import {
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { IoMdArrowDropright } from "react-icons/io";
+import logo from "../assets/hydLogo2.png"
 
 const FooterLinks = [
   {
@@ -39,9 +40,13 @@ const Footer = () => {
       <section className="container">
         <div className="grid md:grid-cols-3 py-5">
           <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3 font-serif">
-              HYD POINT ENDUSTRIYEL
-            </h1>
+            <div className="text-left">
+              <img
+                src={logo}
+                alt="logo"
+                className="max-w-[300px] h-auto mb-4"
+              />
+            </div>
             <p className="text-sm">
               Alım satım sektöründe geniş deneyime sahip olan HYD POINT,
               size en uygun çözümü sunmak için burada. Pazarlama ve satış
