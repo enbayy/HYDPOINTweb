@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 
 const CardGrid = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white px-4">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-7xl">
+    <div className="flex justify-center bg-white px-2 sm:px-4 py-0 sm:py-8 md:py-28">
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-7xl">
         {cardData.map((card) => (
           <Link
             to={`/detail/${card.link}`}
             key={card.id}
             className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105"
           >
-            <div className="w-full aspect-[4/3] bg-white">
+            <div className="w-full aspect-[3/2] bg-white">
               <img
                 src={card.image}
                 alt={card.title}
@@ -26,7 +27,6 @@ const CardGrid = () => {
         ))}
       </div>
     </div>
-
   );
 };
 
