@@ -112,12 +112,12 @@ const App = () => {
             <div
               key={numara}
               onClick={() => window.open(link, "_blank")}
-              className="flex items-center gap-3 bg-[#25D366] hover:bg-[#128C7E] transition transform hover:scale-105 cursor-pointer rounded-xl px-5 py-3 shadow-lg text-white font-semibold text-base select-none"
+              className="whatsapp-bubble"
               role="button"
               tabIndex={0}
               onKeyDown={e => { if (e.key === 'Enter') window.open(link, "_blank") }}
             >
-              <FaWhatsapp size={28} />
+              <FaWhatsapp size={24} />
               <span>{numara}</span>
             </div>
           ))}
