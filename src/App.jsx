@@ -64,8 +64,8 @@ const AnimatedRoutes = () => {
         <Route path="/iletisim" element={<PageTransition><Contact /></PageTransition>} />
         <Route path="/detail/hidrolik" element={<PageTransition><HidrolikPage /></PageTransition>} />
         <Route path="/detail/pnomatik" element={<PageTransition><PnomatikPage /></PageTransition>} />
-        <Route path="/detail/sizdirma" element={<PageTransition><SizdirmaPage /></PageTransition>} />
-        <Route path="/detail/guc-kaynaklari" element={<PageTransition><GucKaynaklariPage /></PageTransition>} />
+        <Route path="/detail/sizdirmazlik" element={<PageTransition><SizdirmaPage /></PageTransition>} />
+        <Route path="/detail/guc-aktarim" element={<PageTransition><GucKaynaklariPage /></PageTransition>} />
       </Routes>
       <Footer />
     </AnimatePresence>

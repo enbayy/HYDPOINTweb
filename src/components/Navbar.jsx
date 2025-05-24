@@ -12,6 +12,46 @@ export const Navlinks = [
     link: "/",
   },
   {
+    id: 1,
+    name: "HİDROLİK",
+    link: "/detail/hidrolik",
+    submenu: [
+      { id: 11, name: "xxxx", link: "/detail/hidrolik/pompalar" },
+      { id: 12, name: "xxxx", link: "/detail/hidrolik/valfler" },
+      { id: 13, name: "xxxx", link: "/detail/hidrolik/silindirler" },
+    ],
+  },
+  {
+    id: 1,
+    name: "PNÖMATİK",
+    link: "/detail/pnomatik",
+    submenu: [
+      { id: 21, name: "xxxx", link: "/detail/pnomatik/silindirler" },
+      { id: 22, name: "xxxx", link: "/detail/pnomatik/valfler" },
+      { id: 23, name: "xxxx", link: "/detail/pnomatik/hazne-tanklar" },
+    ],
+  },
+  {
+    id: 1,
+    name: "SIZDIRMAZLIK",
+    link: "/detail/sizdirmazlik",
+    submenu: [
+      { id: 31, name: "xxxx", link: "/detail/sizdirmazlik/conta" },
+      { id: 32, name: "xxxx", link: "/detail/sizdirmazlik/kele" },
+      { id: 33, name: "xxxx", link: "/detail/sizdirmazlik/yayli-elemanlar" },
+    ],
+  },
+  {
+    id: 1,
+    name: "GÜÇ AKTARIM",
+    link: "/detail/guc-aktarim",
+    submenu: [
+      { id: 41, name: "xxxx", link: "/detail/guc-aktarim/kayis-kasnak" },
+      { id: 42, name: "xxxx", link: "/detail/guc-aktarim/zincir-sistemleri" },
+      { id: 43, name: "xxxx", link: "/detail/guc-aktarim/kavramalar" },
+    ],
+  },
+  {
     id: 2,
     name: "ÜRÜNLERİMİZ",
     link: "/urunler",
@@ -30,6 +70,7 @@ export const Navlinks = [
 
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState(null);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -51,20 +92,43 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
           <nav className="hidden lg:flex">
             <ul className="flex items-center gap-8">
-              {Navlinks.map(({ id, name, link }) => (
-                <li key={id} className="py-2">
+              {Navlinks.map(({ id, name, link, submenu }) => (
+                <li
+                  key={id + name}
+                  className="relative py-2"
+                  onMouseEnter={() => setHoveredMenu(name)}
+                  onMouseLeave={() => setHoveredMenu(null)}
+                >
                   <Link
                     to={link}
-                    className={`text-lg font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
+                    className={`text-sm font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
                       ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"}`}
                   >
                     {name}
                   </Link>
+
+                  {submenu && (
+                    <ul
+                      className={`absolute top-full left-0 mt-2 bg-white dark:bg-gray-900 shadow-xl rounded-lg min-w-[200px] z-50
+                      transform transition-all duration-300 ease-in-out
+                      ${hoveredMenu === name ? 'opacity-100 visible translate-y-0 scale-100' : 'opacity-0 invisible -translate-y-2 scale-95'}
+                      border dark:border-gray-700`}
+                    >
+                      {submenu.map((sub) => (
+                        <li
+                          key={sub.id}
+                          className="px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-100 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors duration-200 whitespace-nowrap"
+                        >
+                          <Link to={sub.link}>{sub.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
               <Link
                 to="/iletisim"
-                className="text-lg font-semibold bg-primary text-white px-6 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition-colors duration-300"
+                className="text-base font-semibold bg-primary text-white px-4 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition-colors duration-300"
               >
                 Teklif Al
               </Link>
