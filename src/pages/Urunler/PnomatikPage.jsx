@@ -34,7 +34,7 @@ const PnomatikPage = () => {
                                         onClick={() => setSelectedCategory(item)}
                                         className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${selectedCategory === item
                                                 ? "bg-blue-600 text-white font-semibold shadow"
-                                                : "text-gray-600 hover:bg-blue-100"
+                                                : "text-gray-600 hover:bg-orange-100"
                                             }`}
                                     >
                                         {item}
