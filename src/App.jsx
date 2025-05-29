@@ -116,13 +116,13 @@ const App = () => {
             <div
               key={numara}
               onClick={() => window.open(link, "_blank")}
-              className="whatsapp-bubble"
+              className="whatsapp-bubble h-8 w-44"
               role="button"
               tabIndex={0}
               onKeyDown={e => { if (e.key === 'Enter') window.open(link, "_blank") }}
             >
-              <FaWhatsapp size={24} />
-              <span>{numara}</span>
+              <FaWhatsapp size={20} />
+              <span className="text-sm">{numara}</span>
             </div>
           ))}
         </div>
