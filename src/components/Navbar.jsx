@@ -12,9 +12,9 @@ export const Navlinks = [
     link: "/",
   },
   {
-    id: 1,
+    id: 2,
     name: "HİDROLİK",
-    link: "/detail/hidrolik",
+    link: "/hidrolik",
     submenu: [
       { id: 11, name: "hidrolik1", link: "/hidrolik/hidrolik1" },
       { id: 12, name: "hidrolik2", link: "/hidrolik/hidrolik2" },
@@ -22,9 +22,9 @@ export const Navlinks = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     name: "PNÖMATİK",
-    link: "/detail/pnomatik",
+    link: "/pnomatik",
     submenu: [
       { id: 21, name: "pnomatik1", link: "/pnomatik/pnomatik1" },
       { id: 22, name: "pnomatik2", link: "/pnomatik/pnomatik2" },
@@ -32,9 +32,9 @@ export const Navlinks = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     name: "SIZDIRMAZLIK",
-    link: "/detail/sizdirmazlik",
+    link: "/sizdirmazlik",
     submenu: [
       { id: 31, name: "sizdirmazlik1", link: "/sizdirmazlik/sizdirmazlik1" },
       { id: 32, name: "sizdirmazlik2", link: "/sizdirmazlik/sizdirmazlik2" },
@@ -42,9 +42,9 @@ export const Navlinks = [
     ],
   },
   {
-    id: 1,
+    id: 5,
     name: "GÜÇ AKTARIM",
-    link: "/detail/guc-aktarim",
+    link: "/guc-aktarim",
     submenu: [
       { id: 41, name: "güc-aktarim1", link: "/güc-aktarim/güc-aktarim1" },
       { id: 42, name: "güc-aktarim2", link: "/güc-aktarim/güc-aktarim2" },
@@ -52,17 +52,17 @@ export const Navlinks = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     name: "ÜRÜNLERİMİZ",
     link: "/urunler",
   },
   {
-    id: 3,
+    id: 7,
     name: "HAKKIMIZDA",
     link: "/hakkimizda",
   },
   {
-    id: 4,
+    id: 8,
     name: "İLETİŞİM",
     link: "/iletisim",
   },
@@ -124,7 +124,7 @@ const Navbar = ({ theme, setTheme }) => {
                       {submenu.map((sub) => (
                         <li
                           key={sub.id}
-                          className="px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-100 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors duration-200 whitespace-nowrap"
+                          className="px-5 py-3 text-sm font-medium text-black dark:text-gray-100 hover:bg-orange-200 dark:hover:bg-primary transition-colors duration-200 whitespace-nowrap"
                         >
                           <Link to={sub.link}>{sub.name}</Link>
                         </li>

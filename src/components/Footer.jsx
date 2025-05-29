@@ -14,22 +14,38 @@ import logo from "../assets/hydLogo2.png"
 const FooterLinks = [
   {
     id: 1,
-    title: "Anasayfa",
+    title: "ANASAYFA",
     link: "/",
+  },{
+    id: 2,
+    title: "HİDROLİK",
+    link: "/hidrolik",
+  },{
+    id: 3,
+    title: "PNÖMATİK",
+    link: "/pnomatik",
+  },{
+    id: 4,
+    title: "SIZDIRMAZLIK",
+    link: "/sizdirmazlik",
+  },{
+    id: 5,
+    title: "GÜÇ AKTARIM",
+    link: "/guc-aktarim",
   },
   {
-    id: 2,
-    title: "Ürünlerimiz",
+    id: 6,
+    title: "ÜRÜNLERİMİZ",
     link: "/urunler",
   },
   {
-    id: 3,
-    title: "Hakkımızda",
+    id: 7,
+    title: "HAKKIMIZDA",
     link: "/hakkimizda",
   },
   {
-    id: 4,
-    title: "İletişim",
+    id: 8,
+    title: "İLETİŞİM",
     link: "/iletisim",
   },
 ];

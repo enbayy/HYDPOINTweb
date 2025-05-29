@@ -11,8 +11,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import ContactHome from "./pages/ContactHome.jsx";
 import HidrolikPage from "./pages/Urunler/HidrolikPage.jsx";
 import PnomatikPage from "./pages/Urunler/PnomatikPage.jsx";
-import SizdirmaPage from "./pages/Urunler/SizdirmaPage.jsx";
-import GucKaynaklariPage from "./pages/Urunler/GucKaynaklari.jsx";
+import SizdirmazlikPage from "./pages/Urunler/SizdirmazlikPage.jsx";
+import GucAktarimPage from "./pages/Urunler/GucAktarimPage.jsx";
 import Slider from "./components/Slider.jsx";
 import SearchInput from "./components/SearchInput.jsx";
 
@@ -43,34 +43,36 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
-      <Routes key={location.pathname} location={location}>
-        <Route
-          path="/"
-          element={
-            <PageTransition>
-              <SearchInput />
-              <Slider />
-              <Hero />
-              <About />
-              <Book />
-              <Services />
-              <CTASection />
-              <ContactHome />
-            </PageTransition>
-          }
-        />
-        <Route path="/urunler" element={<PageTransition><AllProductList /></PageTransition>} />
-        <Route path="/urunler/detay/:id" element={<PageTransition><ProductDetail /></PageTransition>} />
-        <Route path="/hakkimizda" element={<PageTransition><AboutDetail /></PageTransition>} />
-        <Route path="/iletisim" element={<PageTransition><Contact /></PageTransition>} />
-        <Route path="/detail/hidrolik" element={<PageTransition><HidrolikPage /></PageTransition>} />
-        <Route path="/detail/pnomatik" element={<PageTransition><PnomatikPage /></PageTransition>} />
-        <Route path="/detail/sizdirmazlik" element={<PageTransition><SizdirmaPage /></PageTransition>} />
-        <Route path="/detail/guc-aktarim" element={<PageTransition><GucKaynaklariPage /></PageTransition>} />
-      </Routes>
+    <>
+      <AnimatePresence mode="wait">
+        <Routes key={location.pathname} location={location}>
+          <Route
+            path="/"
+            element={
+              <PageTransition>
+                <SearchInput />
+                <Slider />
+                <Hero />
+                <About />
+                <Book />
+                <Services />
+                <CTASection />
+                <ContactHome />
+              </PageTransition>
+            }
+          />
+          <Route path="/urunler" element={<PageTransition><AllProductList /></PageTransition>} />
+          <Route path="/urunler/detay/:id" element={<PageTransition><ProductDetail /></PageTransition>} />
+          <Route path="/hakkimizda" element={<PageTransition><AboutDetail /></PageTransition>} />
+          <Route path="/iletisim" element={<PageTransition><Contact /></PageTransition>} />
+          <Route path="/hidrolik" element={<PageTransition><HidrolikPage /></PageTransition>} />
+          <Route path="/pnomatik" element={<PageTransition><PnomatikPage /></PageTransition>} />
+          <Route path="/sizdirmazlik" element={<PageTransition><SizdirmazlikPage /></PageTransition>} />
+          <Route path="/guc-aktarim" element={<PageTransition><GucAktarimPage /></PageTransition>} />
+        </Routes>
+      </AnimatePresence>
       <Footer />
-    </AnimatePresence>
+    </>
   );
 };
 
@@ -106,10 +108,10 @@ const App = () => {
         <Suspense fallback={<Loader />}>
           <AnimatedRoutes />
         </Suspense>
-        <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-4">
+        <div className="fixed bottom-2 right-2 z-50 flex flex-col gap-2">
           {[
-            { numara: "+90 533 600 03 62", link: "https://wa.me/905336000362" },
-            { numara: "+90 542 510 42 82", link: "https://wa.me/905425104282" }
+            { numara: "0 533 600 03 62", link: "https://wa.me/905336000362" },
+            { numara: "0 542 510 42 82", link: "https://wa.me/905425104282" }
           ].map(({ numara, link }) => (
             <div
               key={numara}
