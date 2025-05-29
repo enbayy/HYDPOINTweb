@@ -34,7 +34,7 @@ const SearchInput = () => {
                 placeholder="Ürün ara..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full p-3 sm:p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition shadow-sm text-sm sm:text-base"
+                className="w-full p-2 sm:p-3 border border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition shadow-md text-sm sm:text-base"
             />
 
             {searchTerm.trim() !== '' && (
@@ -52,14 +52,14 @@ const SearchInput = () => {
                                 }}
                             >
                                 <div className="flex flex-col">
-                                    <span className="text-gray-900 font-semibold leading-tight">
+                                    <span className="text-black font-semibold leading-tight">
                                         {item.title}
                                     </span>
                                 </div>
                             </div>
                         ))
                     ) : (
-                        <div className="p-6 text-center text-gray-500 italic select-none text-sm sm:text-base">
+                        <div className="p-4 text-center text-gray-500 select-none text-sm sm:text-base">
                             Ürün bulunamadı
                         </div>
                     )}

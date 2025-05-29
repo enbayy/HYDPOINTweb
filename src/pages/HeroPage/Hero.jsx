@@ -8,7 +8,7 @@ const CardGrid = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl">
         {cardData.map((card) => (
           <Link
-            to={`/detail/${card.link}`}
+            to={`/${card.link}`}
             key={card.id}
             className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl duration-300 border border-gray-200 dark:border-gray-700"
           >

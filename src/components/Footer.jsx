@@ -16,19 +16,19 @@ const FooterLinks = [
     id: 1,
     title: "ANASAYFA",
     link: "/",
-  },{
+  }, {
     id: 2,
     title: "HİDROLİK",
     link: "/hidrolik",
-  },{
+  }, {
     id: 3,
     title: "PNÖMATİK",
     link: "/pnomatik",
-  },{
+  }, {
     id: 4,
     title: "SIZDIRMAZLIK",
     link: "/sizdirmazlik",
-  },{
+  }, {
     id: 5,
     title: "GÜÇ AKTARIM",
     link: "/guc-aktarim",
@@ -69,10 +69,6 @@ const Footer = () => {
               stratejilerinizde size yardımcı olmaya hazırız.
             </p>
             <br />
-            <div className="flex items-center gap-3">
-              <FaLocationArrow />
-              <p>Konya</p>
-            </div>
             <div className="flex items-center gap-3 mt-3">
               <FaMobileAlt />
               <p>(+90) 533 600 03 62</p>
@@ -100,7 +96,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Hızlı Erişim
+                  HIZLI ERİŞİM
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
@@ -120,7 +116,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  İletişim
+                  İLETİŞİM
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {[
@@ -144,7 +140,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-8">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Konum
+                  KONUM
                 </h1>
                 <div className="text-black dark:text-gray-200">
                   <div className="flex items-center gap-3">
