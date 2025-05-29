@@ -16,9 +16,9 @@ export const Navlinks = [
     name: "HİDROLİK",
     link: "/detail/hidrolik",
     submenu: [
-      { id: 11, name: "xxxx", link: "/detail/hidrolik/pompalar" },
-      { id: 12, name: "xxxx", link: "/detail/hidrolik/valfler" },
-      { id: 13, name: "xxxx", link: "/detail/hidrolik/silindirler" },
+      { id: 11, name: "hidrolik1", link: "/hidrolik/hidrolik1" },
+      { id: 12, name: "hidrolik2", link: "/hidrolik/hidrolik2" },
+      { id: 13, name: "hidrolik3", link: "/hidrolik/hidrolik3" },
     ],
   },
   {
@@ -26,9 +26,9 @@ export const Navlinks = [
     name: "PNÖMATİK",
     link: "/detail/pnomatik",
     submenu: [
-      { id: 21, name: "xxxx", link: "/detail/pnomatik/silindirler" },
-      { id: 22, name: "xxxx", link: "/detail/pnomatik/valfler" },
-      { id: 23, name: "xxxx", link: "/detail/pnomatik/hazne-tanklar" },
+      { id: 21, name: "pnomatik1", link: "/pnomatik/pnomatik1" },
+      { id: 22, name: "pnomatik2", link: "/pnomatik/pnomatik2" },
+      { id: 23, name: "pnomatik3", link: "/pnomatik/pnomatik3" },
     ],
   },
   {
@@ -36,9 +36,9 @@ export const Navlinks = [
     name: "SIZDIRMAZLIK",
     link: "/detail/sizdirmazlik",
     submenu: [
-      { id: 31, name: "xxxx", link: "/detail/sizdirmazlik/conta" },
-      { id: 32, name: "xxxx", link: "/detail/sizdirmazlik/kele" },
-      { id: 33, name: "xxxx", link: "/detail/sizdirmazlik/yayli-elemanlar" },
+      { id: 31, name: "sizdirmazlik1", link: "/sizdirmazlik/sizdirmazlik1" },
+      { id: 32, name: "sizdirmazlik2", link: "/sizdirmazlik/sizdirmazlik2" },
+      { id: 33, name: "sizdirmazlik3", link: "/sizdirmazlik/sizdirmazlik3" },
     ],
   },
   {
@@ -46,9 +46,9 @@ export const Navlinks = [
     name: "GÜÇ AKTARIM",
     link: "/detail/guc-aktarim",
     submenu: [
-      { id: 41, name: "xxxx", link: "/detail/guc-aktarim/kayis-kasnak" },
-      { id: 42, name: "xxxx", link: "/detail/guc-aktarim/zincir-sistemleri" },
-      { id: 43, name: "xxxx", link: "/detail/guc-aktarim/kavramalar" },
+      { id: 41, name: "güc-aktarim1", link: "/güc-aktarim/güc-aktarim1" },
+      { id: 42, name: "güc-aktarim2", link: "/güc-aktarim/güc-aktarim2" },
+      { id: 43, name: "güc-aktarim3", link: "/güc-aktarim/güc-aktarim3" },
     ],
   },
   {
@@ -91,18 +91,22 @@ const Navbar = ({ theme, setTheme }) => {
             </a>
           </div>
           <nav className="hidden lg:flex">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center justify-center gap-8">
               {Navlinks.map(({ id, name, link, submenu }) => (
                 <li
                   key={id + name}
-                  className="relative py-2"
+                  className="relative"
                   onMouseEnter={() => setHoveredMenu(name)}
                   onMouseLeave={() => setHoveredMenu(null)}
                 >
                   <Link
                     to={link}
-                    className={`text-sm font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
-                      ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"}`}
+                    className={`block text-sm font-semibold py-2 px-4 rounded-lg transition-colors duration-300 cursor-pointer text-center
+            ${location.pathname === link
+                        ? "text-primary border-b-4 border-primary"
+                        : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"
+                      }`}
+                    style={{ minWidth: "100px" }}
                   >
                     {name}
                   </Link>
@@ -110,9 +114,12 @@ const Navbar = ({ theme, setTheme }) => {
                   {submenu && (
                     <ul
                       className={`absolute top-full left-0 mt-2 bg-white dark:bg-gray-900 shadow-xl rounded-lg min-w-[200px] z-50
-                      transform transition-all duration-300 ease-in-out
-                      ${hoveredMenu === name ? 'opacity-100 visible translate-y-0 scale-100' : 'opacity-0 invisible -translate-y-2 scale-95'}
-                      border dark:border-gray-700`}
+            transform transition-all duration-300 ease-in-out
+            ${hoveredMenu === name
+                          ? "opacity-100 visible translate-y-0 scale-100"
+                          : "opacity-0 invisible -translate-y-2 scale-95"
+                        }
+            border dark:border-gray-700`}
                     >
                       {submenu.map((sub) => (
                         <li
@@ -126,12 +133,6 @@ const Navbar = ({ theme, setTheme }) => {
                   )}
                 </li>
               ))}
-              <Link
-                to="/iletisim"
-                className="text-base font-semibold bg-primary text-white px-4 py-2 rounded-lg hidden lg:block hover:bg-yellow-500 transition-colors duration-300"
-              >
-                Teklif Al
-              </Link>
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
@@ -145,6 +146,7 @@ const Navbar = ({ theme, setTheme }) => {
               )}
             </ul>
           </nav>
+
           <div className="flex items-center gap-4 lg:hidden">
             {theme === "dark" ? (
               <BiSolidSun

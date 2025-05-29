@@ -14,6 +14,7 @@ import PnomatikPage from "./pages/Urunler/PnomatikPage.jsx";
 import SizdirmaPage from "./pages/Urunler/SizdirmaPage.jsx";
 import GucKaynaklariPage from "./pages/Urunler/GucKaynaklari.jsx";
 import Slider from "./components/Slider.jsx";
+import SearchInput from "./components/SearchInput.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -48,6 +49,7 @@ const AnimatedRoutes = () => {
           path="/"
           element={
             <PageTransition>
+              <SearchInput />
               <Slider />
               <Hero />
               <About />

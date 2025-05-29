@@ -17,12 +17,12 @@ export const cardData = [
         id: 3,
         title: "SIZDIRMAZLIK",
         image: urun1,
-        link: "sizdirma",
+        link: "sizdirmazlik",
     },
     {
         id: 4,
         title: "GÜÇ AKTARIM",
         image: urun1,
-        link: "guc-kaynaklari",
+        link: "guc-aktarim",
     },
 ];
