@@ -91,7 +91,7 @@ const Navbar = ({ theme, setTheme }) => {
             </a>
           </div>
           <nav className="hidden lg:flex">
-            <ul className="flex items-center justify-center gap-8">
+            <ul className="flex items-center justify-center gap-6">
               {Navlinks.map(({ id, name, link, submenu }) => (
                 <li
                   key={id + name}
@@ -101,7 +101,7 @@ const Navbar = ({ theme, setTheme }) => {
                 >
                   <Link
                     to={link}
-                    className={`block text-sm font-semibold py-2 px-4 rounded-lg transition-colors duration-300 cursor-pointer text-center
+                    className={`block text-md font-semibold py-2 px-4 rounded-lg transition-colors duration-300 cursor-pointer text-center
             ${location.pathname === link
                         ? "text-primary border-b-4 border-primary"
                         : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"
