@@ -63,13 +63,13 @@ const Footer = () => {
                 className="max-w-[300px] h-auto mb-4"
               />
             </div>
-            <p className="text-sm">
+            <p className="text-sm text-black">
               Alım satım sektöründe geniş deneyime sahip olan HYD POINT,
               size en uygun çözümü sunmak için burada. Pazarlama ve satış
               stratejilerinizde size yardımcı olmaya hazırız.
             </p>
             <br />
-            <div className="flex items-center gap-3 mt-3">
+            <div className="flex items-center gap-3">
               <FaMobileAlt />
               <p>(+90) 533 600 03 62</p>
             </div>
@@ -77,7 +77,7 @@ const Footer = () => {
               <FaMobileAlt />
               <p>(+90) 542 510 42 82</p>
             </div>
-            <div className="flex items-center gap-3 mt-6">
+            <div className="flex items-center gap-3 mt-5">
               <a href="#">
                 <FaWhatsapp className="text-3xl hover:text-primary duration-300" />
               </a>

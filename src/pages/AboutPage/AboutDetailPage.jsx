@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutDetailPage = () => {
     return (
-        <div>AboutDetailPage</div>
+        <div>Hakkımızda</div>
     )
 }
 

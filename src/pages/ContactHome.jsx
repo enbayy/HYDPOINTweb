@@ -11,17 +11,17 @@ const ContactHome = () => {
                     <div className="space-y-6 w-full lg:w-1/2">
                         <div data-aos="fade-up" data-aos-delay="300" className="flex items-start gap-6">
                             <MapPin />
-                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-gray-700 dark:text-white font-semibold text-lg">
+                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-black dark:text-white font-semibold text-lg">
                                 Fevziçakmak, Hüdai Cd. 131 DB, 42060 Karatay/Konya
                             </p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="500" className="flex items-start gap-6">
                             <Phone />
-                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-gray-700 dark:text-white font-semibold text-lg">0542 510 4282</p>
+                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-black dark:text-white font-semibold text-lg">0542 510 4282</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="700" className="flex items-start gap-6">
                             <Phone />
-                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-gray-700 dark:text-white font-semibold text-lg">0533 600 0362</p>
+                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-black dark:text-white font-semibold text-lg">0533 600 0362</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="900" className="flex items-start gap-6">
                             <Globe />
