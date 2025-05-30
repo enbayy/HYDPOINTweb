@@ -113,7 +113,7 @@ const Navbar = ({ theme, setTheme }) => {
 
                   {submenu && (
                     <ul
-                      className={`absolute top-full left-0 mt-2 bg-white dark:bg-gray-900 shadow-xl rounded-lg min-w-[200px] z-50
+                      className={`absolute top-full left-0 mt-2 bg-white dark:bg-zinc-900 shadow-xl rounded-lg min-w-[200px] z-50
             transform transition-all duration-300 ease-in-out
             ${hoveredMenu === name
                           ? "opacity-100 visible translate-y-0 scale-100"
@@ -124,7 +124,7 @@ const Navbar = ({ theme, setTheme }) => {
                       {submenu.map((sub) => (
                         <li
                           key={sub.id}
-                          className="px-5 py-3 text-sm font-medium text-black dark:text-gray-100 hover:bg-orange-200 dark:hover:bg-primary transition-colors duration-200 whitespace-nowrap"
+                          className="px-5 py-3 text-sm font-medium text-black dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 whitespace-nowrap"
                         >
                           <Link to={sub.link}>{sub.name}</Link>
                         </li>

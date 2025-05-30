@@ -34,17 +34,16 @@ const SearchInput = () => {
                 placeholder="Ürün ara..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full p-2 sm:p-3 border border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition shadow-md text-sm sm:text-base"
+                className="w-full p-2 sm:p-3 border border-orange-500 rounded-lg text-black dark:text-white bg-white dark:bg-black focus:outline-none focus:ring-1 focus:ring-orange-500 transition shadow-md text-sm sm:text-base"
             />
-
             {searchTerm.trim() !== '' && (
-                <div className="absolute z-20 top-full left-0 w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-2xl max-h-60 sm:max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-gray-100">
+                <div className="absolute z-20 top-full left-0 w-full mt-2 bg-white dark:bg-black border border-gray-300 rounded-lg shadow-2xl max-h-60 sm:max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-gray-100">
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((item) => (
                             <div
                                 key={item.id}
                                 onClick={() => handleSelect(item.link)}
-                                className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 border-b last:border-b-0 hover:bg-orange-100 cursor-pointer transition text-sm sm:text-base"
+                                className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 border-b last:border-b-0 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition text-sm sm:text-base"
                                 role="button"
                                 tabIndex={0}
                                 onKeyDown={(e) => {
@@ -52,7 +51,7 @@ const SearchInput = () => {
                                 }}
                             >
                                 <div className="flex flex-col">
-                                    <span className="text-black font-semibold leading-tight">
+                                    <span className="text-black dark:text-white font-semibold leading-tight">
                                         {item.title}
                                     </span>
                                 </div>
