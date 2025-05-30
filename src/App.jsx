@@ -15,6 +15,7 @@ import SizdirmazlikPage from "./pages/Urunler/SizdirmazlikPage.jsx";
 import GucAktarimPage from "./pages/Urunler/GucAktarimPage.jsx";
 import Slider from "./components/Slider.jsx";
 import SearchInput from "./components/SearchInput.jsx";
+import FeaturedProducts from "./pages/FeaturedProducts.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -54,8 +55,7 @@ const AnimatedRoutes = () => {
                 <Slider />
                 <Hero />
                 <About />
-                <Book />
-                <Services />
+                <FeaturedProducts />
                 <CTASection />
                 <ContactHome />
               </PageTransition>

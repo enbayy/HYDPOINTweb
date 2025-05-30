@@ -33,7 +33,7 @@ const SizdirmaPage = () => {
 
     const handleCategoryClick = (item) => {
         setSelectedCategory(item.title);
-        navigate(item.link); 
+        navigate(item.link);
     };
 
     return (
@@ -49,11 +49,10 @@ const SizdirmaPage = () => {
                                     <li
                                         key={idx}
                                         onClick={() => handleCategoryClick(item)}
-                                        className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${
-                                            selectedCategory === item.title
+                                        className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${selectedCategory === item.title
                                                 ? "bg-orange-100 text-white font-semibold shadow"
                                                 : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-                                        }`}
+                                            }`}
                                     >
                                         {item.title}
                                     </li>
@@ -64,11 +63,11 @@ const SizdirmaPage = () => {
                 </nav>
             </aside>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 flex-1">
                 {SizdirmaData.map((card) => (
                     <Link to={card.link} key={card.id}>
-                        <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 cursor-pointer">
-                            <div className="w-full aspect-[4/3] bg-gray-50 dark:bg-zinc-800">
+                        <div className="group bg-white dark:bg-zinc-900 overflow-hidden transition-transform transform hover:scale-105 duration-300 cursor-pointer">
+                            <div className="w-full aspect-[4/3] bg-white dark:bg-zinc-800">
                                 <img
                                     src={card.image}
                                     alt={card.title}
@@ -76,12 +75,15 @@ const SizdirmaPage = () => {
                                 />
                             </div>
                             <div className="p-4 text-center">
-                                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{card.title}</h3>
+                                <h3 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary transition-colors duration-300">
+                                    {card.title}
+                                </h3>
                             </div>
                         </div>
                     </Link>
                 ))}
             </div>
+
         </div>
     );
 };

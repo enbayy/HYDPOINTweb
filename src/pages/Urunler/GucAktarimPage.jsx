@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GucKaynaklariData } from "../../data/GucKaynaklariData";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const menuData = [
     {
@@ -54,8 +54,8 @@ const GucKaynaklariPage = () => {
                                         key={idx}
                                         onClick={() => handleCategoryClick(item)}
                                         className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${selectedCategory === item.title
-                                                ? "bg-orange-100 text-white font-semibold shadow"
-                                                : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                                            ? "bg-orange-100 text-white font-semibold shadow"
+                                            : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
                                             }`}
                                     >
                                         {item.title}
@@ -67,19 +67,10 @@ const GucKaynaklariPage = () => {
                 </nav>
             </aside>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 flex-1">
                 {GucKaynaklariData.map((card) => (
-                    <div
-                        key={card.id}
-                        onClick={() => handleCardClick(card.link)} 
-                        className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 cursor-pointer"
-                        role="button"
-                        tabIndex={0}
-                        onKeyPress={(e) => {
-                            if (e.key === "Enter") handleCardClick(card.link);
-                        }}
-                    >
-                        <div className="w-full aspect-[4/3] bg-gray-50 dark:bg-zinc-800">
+                    <Link to={card.link} key={card.id} className="group cursor-pointer overflow-hidden transition-transform transform hover:scale-105 duration-300 bg-white dark:bg-zinc-900" tabIndex={0}>
+                        <div className="w-full aspect-[4/3] bg-white dark:bg-zinc-800">
                             <img
                                 src={card.image}
                                 alt={card.title}
@@ -87,9 +78,11 @@ const GucKaynaklariPage = () => {
                             />
                         </div>
                         <div className="p-4 text-center">
-                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{card.title}</h3>
+                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary transition-colors duration-300">
+                                {card.title}
+                            </h3>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

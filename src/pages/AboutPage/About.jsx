@@ -11,7 +11,7 @@ const About = () => {
               <img
                 src={malzeme}
                 alt="HYDPOINT"
-                className="sm:scale-125 sm:-translate-x-11 max-h-[400px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
+                className="sm:scale-125 sm:-translate-x-11 max-h-[400px] drop-shadow-[3px_4px_4px_rgba(0,0,0,0.50)]"
               />
             </div>
             <div>

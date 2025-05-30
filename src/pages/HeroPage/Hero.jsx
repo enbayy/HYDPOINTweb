@@ -10,7 +10,7 @@ const CardGrid = () => {
           <Link
             to={`/${card.link}`}
             key={card.id}
-            className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-xl duration-300 border border-gray-200 dark:border-gray-700"
+            className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 border border-gray-200 dark:border-gray-700"
           >
             <div className="w-full aspect-[4/3] bg-gray-50 dark:bg-zinc-800">
               <img
