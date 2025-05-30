@@ -103,7 +103,7 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+      <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden selection:bg-orange-500 selection:text-white">
         <Navbar theme={theme} setTheme={setTheme} />
         <Suspense fallback={<Loader />}>
           <AnimatedRoutes />

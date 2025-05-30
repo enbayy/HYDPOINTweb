@@ -19,6 +19,9 @@ export default {
           sm: "3rem",
         },
       },
+      selection: {
+        DEFAULT: 'orange-500',
+      },
     },
   },
   plugins: [],
