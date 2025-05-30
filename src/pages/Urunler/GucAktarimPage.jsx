@@ -29,6 +29,7 @@ const menuData = [
 
 const GucKaynaklariPage = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [openCategory, setOpenCategory] = useState(null);
     const navigate = useNavigate();
 
     const handleCategoryClick = (item) => {
@@ -36,8 +37,12 @@ const GucKaynaklariPage = () => {
         navigate(item.link);
     };
 
-    const handleCardClick = (link) => {
-        navigate(link);
+    const toggleCategory = (title) => {
+        if (openCategory === title) {
+            setOpenCategory(null);
+        } else {
+            setOpenCategory(title);
+        }
     };
 
     return (
@@ -47,21 +52,39 @@ const GucKaynaklariPage = () => {
                 <nav className="space-y-4">
                     {menuData.map((menu, i) => (
                         <div key={i}>
-                            <h4 className="font-semibold text-gray-700 dark:text-white mb-2">{menu.title}</h4>
-                            <ul className="space-y-2">
-                                {menu.items.map((item, idx) => (
-                                    <li
-                                        key={idx}
-                                        onClick={() => handleCategoryClick(item)}
-                                        className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${selectedCategory === item.title
-                                            ? "bg-orange-100 text-white font-semibold shadow"
-                                            : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-                                            }`}
-                                    >
-                                        {item.title}
-                                    </li>
-                                ))}
-                            </ul>
+                            <h4
+                                onClick={() => toggleCategory(menu.title)}
+                                className="font-semibold text-black dark:text-white mb-2 cursor-pointer select-none flex justify-between items-center"
+                            >
+                                {menu.title}
+                                <svg
+                                    className={`w-4 h-4 transition-transform duration-300 ${openCategory === menu.title ? "rotate-90" : ""
+                                        }`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </h4>
+                            {openCategory === menu.title && (
+                                <ul className="space-y-2">
+                                    {menu.items.map((item, idx) => (
+                                        <li
+                                            key={idx}
+                                            onClick={() => handleCategoryClick(item)}
+                                            className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${selectedCategory === item.title
+                                                    ? "bg-orange-100 text-white font-semibold shadow"
+                                                    : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                                                }`}
+                                        >
+                                            {item.title}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     ))}
                 </nav>
@@ -69,7 +92,12 @@ const GucKaynaklariPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 flex-1">
                 {GucKaynaklariData.map((card) => (
-                    <Link to={card.link} key={card.id} className="group cursor-pointer overflow-hidden transition-transform transform hover:scale-105 duration-300 bg-white dark:bg-zinc-900" tabIndex={0}>
+                    <Link
+                        to={card.link}
+                        key={card.id}
+                        className="group cursor-pointer overflow-hidden transition-transform transform hover:scale-105 duration-300 bg-white dark:bg-zinc-900"
+                        tabIndex={0}
+                    >
                         <div className="w-full aspect-[4/3] bg-white dark:bg-zinc-800">
                             <img
                                 src={card.image}

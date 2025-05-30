@@ -10,8 +10,26 @@ const CardGrid = () => {
           <Link
             to={`/${card.link}`}
             key={card.id}
-            className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 border border-gray-200 dark:border-gray-700"
+            className="relative bg-white dark:bg-zinc-900 overflow-hidden transform transition-transform hover:scale-105 duration-300 border border-gray-200 dark:border-gray-700"
           >
+            <span
+              className="corner-top-horizontal absolute top-0 right-0 bg-primary transition-all duration-300 rounded-tr-lg"
+              style={{ width: "30px", height: "2px" }}
+            />
+            <span
+              className="corner-top-vertical absolute top-0 right-0 bg-primary transition-all duration-300 rounded-tr-lg"
+              style={{ width: "2px", height: "30px" }}
+            />
+
+            <span
+              className="corner-bottom-horizontal absolute bottom-0 left-0 bg-primary transition-all duration-300 rounded-bl-lg"
+              style={{ width: "30px", height: "2px" }}
+            />
+            <span
+              className="corner-bottom-vertical absolute bottom-0 left-0 bg-primary transition-all duration-300 rounded-bl-lg"
+              style={{ width: "2px", height: "30px" }}
+            />
+
             <div className="w-full aspect-[4/3] bg-gray-50 dark:bg-zinc-800">
               <img
                 src={card.image}
@@ -20,11 +38,32 @@ const CardGrid = () => {
               />
             </div>
             <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{card.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                {card.title}
+              </h3>
             </div>
           </Link>
         ))}
       </div>
+
+      <style>{`
+        a:hover > .corner-top-horizontal {
+          width: 100% !important;
+          height: 2px !important;
+        }
+        a:hover > .corner-top-vertical {
+          width: 2px !important;
+          height: 100% !important;
+        }
+        a:hover > .corner-bottom-horizontal {
+          width: 100% !important;
+          height: 2px !important;
+        }
+        a:hover > .corner-bottom-vertical {
+          width: 2px !important;
+          height: 100% !important;
+        }
+      `}</style>
     </div>
   );
 };
