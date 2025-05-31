@@ -76,8 +76,8 @@ const GucKaynaklariPage = () => {
                                             key={idx}
                                             onClick={() => handleCategoryClick(item)}
                                             className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${selectedCategory === item.title
-                                                    ? "bg-orange-100 text-white font-semibold shadow"
-                                                    : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                                                ? "bg-orange-100 text-white font-semibold shadow"
+                                                : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
                                                 }`}
                                         >
                                             {item.title}
@@ -90,14 +90,30 @@ const GucKaynaklariPage = () => {
                 </nav>
             </aside>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-1">
                 {GucKaynaklariData.map((card) => (
                     <Link
                         to={card.link}
                         key={card.id}
-                        className="group cursor-pointer overflow-hidden transition-transform transform hover:scale-105 duration-300 bg-white dark:bg-zinc-900"
-                        tabIndex={0}
+                        className="group relative bg-white dark:bg-zinc-900 overflow-hidden transition-transform transform hover:scale-105 duration-300 cursor-pointer border border-gray-200 dark:border-gray-700"
                     >
+                        <span
+                            className="corner-top-horizontal absolute top-0 right-0 bg-primary transition-all duration-300 rounded-tr-lg"
+                            style={{ width: "30px", height: "2px" }}
+                        />
+                        <span
+                            className="corner-top-vertical absolute top-0 right-0 bg-primary transition-all duration-300 rounded-tr-lg"
+                            style={{ width: "2px", height: "30px" }}
+                        />
+                        <span
+                            className="corner-bottom-horizontal absolute bottom-0 left-0 bg-primary transition-all duration-300 rounded-bl-lg"
+                            style={{ width: "30px", height: "2px" }}
+                        />
+                        <span
+                            className="corner-bottom-vertical absolute bottom-0 left-0 bg-primary transition-all duration-300 rounded-bl-lg"
+                            style={{ width: "2px", height: "30px" }}
+                        />
+
                         <div className="w-full aspect-[4/3] bg-white dark:bg-zinc-800">
                             <img
                                 src={card.image}
@@ -113,6 +129,25 @@ const GucKaynaklariPage = () => {
                     </Link>
                 ))}
             </div>
+
+            <style>{`
+                a:hover > .corner-top-horizontal {
+                    width: 100% !important;
+                    height: 2px !important;
+                }
+                a:hover > .corner-top-vertical {
+                    width: 2px !important;
+                    height: 100% !important;
+                }
+                a:hover > .corner-bottom-horizontal {
+                    width: 100% !important;
+                    height: 2px !important;
+                }
+                a:hover > .corner-bottom-vertical {
+                    width: 2px !important;
+                    height: 100% !important;
+                }
+            `}</style>
         </div>
     );
 };
