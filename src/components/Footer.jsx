@@ -1,12 +1,8 @@
 import React from "react";
 import {
-  FaInstagram,
-  FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
-  FaWhatsapp,
 } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { IoMdArrowDropright } from "react-icons/io";
 import logo from "../assets/hydLogo2.png"
