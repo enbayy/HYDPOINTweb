@@ -77,20 +77,6 @@ const Footer = () => {
               <FaMobileAlt />
               <p>(+90) 542 510 42 82</p>
             </div>
-            <div className="flex items-center gap-3 mt-5">
-              <a href="#">
-                <FaWhatsapp className="text-3xl hover:text-primary duration-300" />
-              </a>
-              <a href="#">
-                <FaInstagram className="text-3xl hover:text-primary duration-300" />
-              </a>
-              <a href="#">
-                <FaLinkedin className="text-3xl hover:text-primary duration-300" />
-              </a>
-              <a href="#">
-                <FaSquareXTwitter className="text-3xl hover:text-primary duration-300" />
-              </a>
-            </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div>
