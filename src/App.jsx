@@ -79,6 +79,7 @@ const AnimatedRoutes = () => {
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [showWhatsApp, setShowWhatsApp] = useState(false);
   const element = document.documentElement;
 
   useEffect(() => {
@@ -110,25 +111,34 @@ const App = () => {
           <AnimatedRoutes />
         </Suspense>
         <ScrollToTopButton />
-        <div className="fixed bottom-2 right-2 z-50 flex flex-col gap-2">
-          {[
-            { numara: "0 533 600 03 62", link: "https://wa.me/905336000362" },
-            { numara: "0 542 510 42 82", link: "https://wa.me/905425104282" }
-          ].map(({ numara, link }) => (
-            <div
-              key={numara}
-              onClick={() => window.open(link, "_blank")}
-              className="whatsapp-bubble h-9 w-44"
-              role="button"
-              tabIndex={0}
-              onKeyDown={e => { if (e.key === 'Enter') window.open(link, "_blank") }}
-            >
-              <FaWhatsapp size={20} />
-              <span className="text-sm whitespace-nowrap">
-                {numara}
-              </span>
+        <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3">
+          <button
+            onClick={() => setShowWhatsApp(!showWhatsApp)}
+            className="px-4 py-2 rounded-full bg-green-600 text-white font-semibold shadow-lg hover:bg-green-700 transition-all duration-300"
+          >
+            {showWhatsApp ? "Kapat" : "WhatsApp İletişim"}
+          </button>
+          {showWhatsApp && (
+            <div className="flex flex-col gap-2">
+              {[
+                { label: "Tansu Çağlar TEMİZ", number: "0 533 600 03 62", link: "https://wa.me/905336000362" },
+                { label: "Mustafa ÖZDEM", number: "0 542 510 42 82", link: "https://wa.me/905425104282" }
+              ].map(({ label, number, link }) => (
+                <button
+                  key={number}
+                  onClick={() => window.open(link, "_blank")}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl shadow-md bg-green-500 hover:bg-green-600 text-white text-sm transition-all duration-300"
+                  aria-label={`WhatsApp ile iletişim kur: ${label}`}
+                >
+                  <FaWhatsapp size={20} />
+                  <div className="flex flex-col items-start">
+                    <span className="font-semibold text-xs">{label}</span>
+                    <span className="text-xs opacity-90">{number}</span>
+                  </div>
+                </button>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       </div>
     </Router>
