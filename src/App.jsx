@@ -16,6 +16,7 @@ import GucAktarimPage from "./pages/Urunler/GucAktarimPage.jsx";
 import Slider from "./components/Slider.jsx";
 import SearchInput from "./components/SearchInput.jsx";
 import FeaturedProducts from "./pages/FeaturedProducts.jsx";
+import ScrollToTopButton from "./pages/ScrollToTopButton.jsx";
 
 const Hero = lazy(() => import("./pages/HeroPage/Hero.jsx"));
 const AllProductList = lazy(() => import("./pages/ProductPage/AllProductList.jsx"));
@@ -108,6 +109,7 @@ const App = () => {
         <Suspense fallback={<Loader />}>
           <AnimatedRoutes />
         </Suspense>
+        <ScrollToTopButton />
         <div className="fixed bottom-2 right-2 z-50 flex flex-col gap-2">
           {[
             { numara: "0 533 600 03 62", link: "https://wa.me/905336000362" },
@@ -116,13 +118,15 @@ const App = () => {
             <div
               key={numara}
               onClick={() => window.open(link, "_blank")}
-              className="whatsapp-bubble h-8 w-44"
+              className="whatsapp-bubble h-9 w-44"
               role="button"
               tabIndex={0}
               onKeyDown={e => { if (e.key === 'Enter') window.open(link, "_blank") }}
             >
               <FaWhatsapp size={20} />
-              <span className="text-sm">{numara}</span>
+              <span className="text-sm whitespace-nowrap">
+                {numara}
+              </span>
             </div>
           ))}
         </div>
