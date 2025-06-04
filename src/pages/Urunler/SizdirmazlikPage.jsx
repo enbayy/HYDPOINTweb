@@ -42,7 +42,7 @@ const SizdirmaPage = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto px-4 py-8 gap-8">
+        <div className="flex flex-col md:flex-row container mx-auto py-8 gap-8">
             <aside className="md:w-1/4 w-full bg-white dark:bg-zinc-900 shadow-lg rounded-2xl p-6">
                 <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">Kategoriler</h2>
                 <nav className="space-y-4">

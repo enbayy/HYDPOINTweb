@@ -11,7 +11,7 @@ const FeaturedProducts = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
         {FeaturedData.map((card) => (
           <Link to={card.link} key={card.id}>
-            <div className="relative group bg-white dark:bg-zinc-900 rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl cursor-pointer">
+            <div className="relative group bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-700 overflow-hidden transition-transform duration-300 hover:scale-[1.03] cursor-pointer">
               <div className="relative w-full aspect-[4/3] bg-white dark:bg-zinc-800">
                 <img
                   src={card.image}
