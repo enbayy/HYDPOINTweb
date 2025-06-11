@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 
 const CardGrid = () => {
   return (
-    <div className="flex justify-center bg-white dark:bg-black px-4 py-12">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+    <div className="container flex flex-col justify-center bg-white dark:bg-black px-4 py-12 gap-8">
+      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+        ÜRÜNLERİMİZ
+      </h1>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
         {cardData.map((card) => (
           <Link
             to={`/${card.link}`}
@@ -20,7 +23,6 @@ const CardGrid = () => {
               className="corner-top-vertical absolute top-0 right-0 bg-primary transition-all duration-300 rounded-tr-lg"
               style={{ width: "2px", height: "30px" }}
             />
-
             <span
               className="corner-bottom-horizontal absolute bottom-0 left-0 bg-primary transition-all duration-300 rounded-bl-lg"
               style={{ width: "30px", height: "2px" }}
@@ -29,8 +31,7 @@ const CardGrid = () => {
               className="corner-bottom-vertical absolute bottom-0 left-0 bg-primary transition-all duration-300 rounded-bl-lg"
               style={{ width: "2px", height: "30px" }}
             />
-
-            <div className="w-full aspect-[4/3] bg-gray-50 dark:bg-zinc-800">
+            <div className="w-full aspect-[4/3]">
               <img
                 src={card.image}
                 alt={card.title}

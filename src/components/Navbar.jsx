@@ -102,7 +102,7 @@ const Navbar = ({ theme, setTheme }) => {
                   <Link
                     to={link}
                     className={`block text-md font-semibold py-2 px-4 transition-colors duration-300 cursor-pointer text-center
-            ${location.pathname === link
+                        ${location.pathname === link
                         ? "text-primary "
                         : "text-black dark:text-white hover:text-primary hover:border-primary"
                       }`}
@@ -110,16 +110,15 @@ const Navbar = ({ theme, setTheme }) => {
                   >
                     {name}
                   </Link>
-
                   {submenu && (
                     <ul
                       className={`absolute top-full left-0 mt-2 bg-white dark:bg-zinc-900 shadow-xl rounded-lg min-w-[200px] z-50
-            transform transition-all duration-300 ease-in-out
-            ${hoveredMenu === name
+                          transform transition-all duration-300 ease-in-out
+                          ${hoveredMenu === name
                           ? "opacity-100 visible translate-y-0 scale-100"
                           : "opacity-0 invisible -translate-y-2 scale-95"
                         }
-            border dark:border-gray-700`}
+                          border dark:border-gray-700`}
                     >
                       {submenu.map((sub) => (
                         <li
@@ -146,7 +145,6 @@ const Navbar = ({ theme, setTheme }) => {
               )}
             </ul>
           </nav>
-
           <div className="flex items-center gap-4 lg:hidden">
             {theme === "dark" ? (
               <BiSolidSun

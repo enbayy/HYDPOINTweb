@@ -57,7 +57,6 @@ const AnimatedRoutes = () => {
                 <Hero />
                 <About />
                 <FeaturedProducts />
-                <CTASection />
                 <ContactHome />
               </PageTransition>
             }
