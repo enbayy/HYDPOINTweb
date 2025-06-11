@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import resim1 from "../assets/hydLogo2.png";
 import resim2 from "../assets/hydLogo2.png";
 import resim3 from "../assets/hydLogo2.png";
@@ -17,7 +16,7 @@ const SliderComponent = () => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -44,36 +43,37 @@ const SliderComponent = () => {
       </div>
 
       <style>{`
-  .custom-dots {
-    position: static !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
+        .custom-dots {
+          position: static !important;
+          display: flex !important;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 20px;
+        }
 
-  .custom-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ccc;
-    transition: all 0.3s ease-in-out;
-  }
+        .custom-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #ccc;
+          transition: all 0.3s ease-in-out;
+        }
 
-  .custom-dot:hover {
-    background-color: #ff7f00;
-    transform: scale(1.2);
-  }
+        .custom-dot:hover {
+          background-color: #ff7f00;
+          transform: scale(1.2);
+        }
 
-  .slick-active .custom-dot {
-    background-color: #ff7f00;
-    transform: scale(1.3);
-  }
+        .slick-active .custom-dot {
+          background-color: #ff7f00;
+          transform: scale(1.3);
+        }
 
-  .slick-slider *:focus {
-    outline: none !important;
-  }
-`}</style>
+        .slick-slider *:focus {
+          outline: none !important;
+        }
+      `}
+      </style>
     </div>
   );
 };
