@@ -126,7 +126,7 @@ const App = () => {
                 <button
                   key={number}
                   onClick={() => window.open(link, "_blank")}
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl shadow-md bg-green-500 hover:bg-green-600 text-white text-sm transition-all duration-300"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl shadow-md bg-green-600 hover:bg-green-700 text-white text-sm transition-all duration-300"
                   aria-label={`WhatsApp ile iletişim kur: ${label}`}
                 >
                   <FaWhatsapp size={20} />
