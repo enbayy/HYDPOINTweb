@@ -1,7 +1,12 @@
 import React from "react";
 import malzeme from "../../assets/hydLogo.png";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/iletisim")
+  }
   return (
     <section id="about-detail">
       <div className="container bg-white dark:bg-dark py-12 sm:grid sm:place-items-center duration-300">
@@ -21,16 +26,13 @@ const About = () => {
               <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 Güçlü altyapımızla stratejik çözümler sunuyor ve müşterilerimizin rekabetçi avantaj elde etmesine yardımcı oluyoruz. Yenilikçi yaklaşımımızla her zaman en iyi ticaret deneyimini sağlamayı amaçlıyoruz.
               </p>
-
               <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 Vizyonumuz, sektördeki liderliğimizi sürdürmek, misyonumuz ise güvenilir hizmet anlayışımızla kalıcı başarılar elde etmektir. Her projede kaliteyi ve müşteri memnuniyetini ön planda tutuyoruz.
               </p>
-
               <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 Ekibimiz, her biri alanında uzman profesyonellerden oluşuyor ve yenilikçi çözümlerle iş ortaklarımızın hedeflerine ulaşmalarını sağlıyoruz.
               </p>
-
-              <button data-aos="fade-up" className="button-outline font-inter">
+              <button onClick={handleClick} data-aos="fade-up" className="button-outline font-inter">
                 Hemen Başla
               </button>
             </div>
