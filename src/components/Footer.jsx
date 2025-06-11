@@ -59,7 +59,7 @@ const Footer = () => {
                 className="max-w-[300px] h-auto mb-4"
               />
             </div>
-            <p className="text-sm text-black">
+            <p className="text-sm text-black font-poppins">
               Alım satım sektöründe geniş deneyime sahip olan HYD POINT,
               size en uygun çözümü sunmak için burada. Pazarlama ve satış
               stratejilerinizde size yardımcı olmaya hazırız.
@@ -67,17 +67,17 @@ const Footer = () => {
             <br />
             <div className="flex items-center gap-3">
               <FaMobileAlt />
-              <p>(+90) 533 600 03 62</p>
+              <p className="font-poppins">(+90) 533 600 03 62</p>
             </div>
             <div className="flex items-center gap-3 mt-3">
               <FaMobileAlt />
-              <p>(+90) 542 510 42 82</p>
+              <p className="font-poppins">(+90) 542 510 42 82</p>
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div>
               <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3 font-inter">
                   HIZLI ERİŞİM
                 </h1>
                 <ul className="flex flex-col gap-3">
@@ -85,7 +85,7 @@ const Footer = () => {
                     <li key={link.title}>
                       <Link
                         to={link.link}
-                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-black dark:text-gray-200 flex items-center"
+                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-black dark:text-gray-200 flex items-center font-poppins"
                       >
                         <IoMdArrowDropright />
                         <span>{link.title}</span>
@@ -97,10 +97,10 @@ const Footer = () => {
             </div>
             <div>
               <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3 font-inter">
                   İLETİŞİM
                 </h1>
-                <ul className="flex flex-col gap-3">
+                <ul className="flex flex-col gap-3 font-poppins">
                   {[
                     { title: "info@hydpoint.com" },
                     { title: "(+90) 533 600 03 62" },
@@ -121,13 +121,13 @@ const Footer = () => {
             </div>
             <div>
               <div className="py-8 px-8">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3 font-inter">
                   KONUM
                 </h1>
                 <div className="text-black dark:text-gray-200">
                   <div className="flex items-center gap-3">
                     <FaLocationArrow />
-                    <p>Fevziçakmak, Hüdai Cd. 131 DB, 42060 Karatay/Konya</p>
+                    <p className="font-poppins">Fevziçakmak, Hüdai Cd. 131 DB, 42060 Karatay/Konya</p>
                   </div>
                 </div>
               </div>

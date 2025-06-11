@@ -44,7 +44,7 @@ const PnomatikPage = () => {
     return (
         <div className="flex flex-col md:flex-row container mx-auto py-8 gap-8">
             <aside className="md:w-1/4 w-full bg-white dark:bg-zinc-900 shadow-lg rounded-2xl p-6">
-                <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">Kategoriler</h2>
+                <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4 font-inter">KATEGORİLER</h2>
                 <nav className="space-y-4">
                     {menuData.map((menu, i) => (
                         <div key={i}>
@@ -70,7 +70,7 @@ const PnomatikPage = () => {
                                         <li
                                             key={idx}
                                             onClick={() => handleCategoryClick(item)}
-                                            className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm ${
+                                            className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 text-sm font-inter ${
                                                 selectedCategory === item.title
                                                     ? "bg-orange-100 text-white font-semibold shadow"
                                                     : "text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -115,7 +115,7 @@ const PnomatikPage = () => {
                                 />
                             </div>
                             <div className="p-4 text-center">
-                                <h3 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary transition-colors duration-300">
+                                <h3 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary transition-colors duration-300 font-inter">
                                     {card.title}
                                 </h3>
                             </div>

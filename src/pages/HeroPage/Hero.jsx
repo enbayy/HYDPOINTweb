@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CardGrid = () => {
   return (
     <div className="container flex flex-col justify-center bg-white dark:bg-black px-4 py-12 gap-8">
-      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white font-inter">
         ÜRÜNLERİMİZ
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
@@ -13,7 +13,7 @@ const CardGrid = () => {
           <Link
             to={`/${card.link}`}
             key={card.id}
-            className="relative bg-white dark:bg-zinc-900 overflow-hidden transform transition-transform hover:scale-105 duration-300 border border-gray-200 dark:border-gray-700"
+            className="relative bg-white dark:bg-zinc-900 overflow-hidden transform transition-transform hover:scale-105 duration-300 border border-gray-200 dark:border-gray-700 font-inter"
           >
             <span
               className="corner-top-horizontal absolute top-0 right-0 bg-primary transition-all duration-300 rounded-tr-lg"

@@ -3,25 +3,25 @@ import { Globe, Mail, MapPin, Phone } from 'lucide-react';
 const ContactHome = () => {
     return (
         <section>
-            <div className="container p-8 rounded-xl">
-                <h2 style={{ fontFamily: "Inter, sans-serif" }} data-aos="fade-up" data-aos-delay="100" className="text-3xl font-bold text-black dark:text-white mb-6 font-sans">
+            <div className="container p-8">
+                <h2 data-aos="fade-up" data-aos-delay="100" className="text-3xl font-semibold text-black dark:text-white mb-6 font-inter">
                     İLETİŞİM BİLGİLERİ
                 </h2>
                 <div className="flex flex-col md:flex-col lg:flex-row items-start gap-8">
                     <div className="space-y-6 w-full lg:w-1/2">
                         <div data-aos="fade-up" data-aos-delay="300" className="flex items-start gap-6">
                             <MapPin />
-                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-black dark:text-white font-semibold text-lg">
+                            <p className="text-black dark:text-white text-lg font-poppins">
                                 Fevziçakmak, Hüdai Cd. 131 DB, 42060 Karatay/Konya
                             </p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="500" className="flex items-start gap-6">
                             <Phone />
-                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-black dark:text-white font-semibold text-lg">0542 510 4282</p>
+                            <p className="text-black dark:text-white text-lg font-poppins">0542 510 4282</p>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="700" className="flex items-start gap-6">
+                        <div data-aos="fade-up" data-aos-delay="700" className="flex items-start gap-6 font-poppins">
                             <Phone />
-                            <p style={{ fontFamily: "Poppins, sans-serif" }} className="text-black dark:text-white font-semibold text-lg">0533 600 0362</p>
+                            <p className="text-black dark:text-white text-lg">0533 600 0362</p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="900" className="flex items-start gap-6">
                             <Globe />
@@ -29,8 +29,7 @@ const ContactHome = () => {
                                 href="https://www.hydpoint.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:underline text-lg font-semibold"
-                                style={{ fontFamily: "Poppins, sans-serif" }}
+                                className="text-primary hover:underline text-lg font-poppins"
                             >
                                 www.hydpoint.com
                             </a>
@@ -39,8 +38,7 @@ const ContactHome = () => {
                             <Mail />
                             <a
                                 href="mailto:info@hydpoint.com"
-                                className="text-primary hover:underline text-lg font-semibold"
-                                style={{ fontFamily: "Poppins, sans-serif" }}
+                                className="text-primary hover:underline text-lg font-poppins"
                             >
                                 info@hydpoint.com
                             </a>

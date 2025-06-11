@@ -25,8 +25,8 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
             <div className="p-8 space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white">İletişime Geçin</h2>
-              <p className="text-gray-500 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white font-inter">İLETİŞİME GEÇİN</h2>
+              <p className="text-gray-500 dark:text-white font-poppins">
                 Alım satım ihtiyaçlarınızı bize bildirerek en iyi çözümü
                 alabilirsiniz. Size nasıl yardımcı olabiliriz?
               </p>
@@ -35,7 +35,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="text-black dark:text-white block mb-2 font-medium"
+                    className="text-black dark:text-white block mb-2 font-medium font-inter"
                   >
                     Adınız
                   </label>
@@ -54,7 +54,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-black dark:text-white block mb-2 font-medium"
+                    className="text-black dark:text-white block mb-2 font-medium font-inter"
                   >
                     E-posta
                   </label>
@@ -73,7 +73,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="text-black dark:text-white block mb-2 font-medium"
+                    className="text-black dark:text-white block mb-2 font-medium font-inter"
                   >
                     Mesajınız
                   </label>
@@ -92,7 +92,7 @@ const Contact = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="inline-block font-semibold py-3 px-6 bg-primary text-white hover:bg-primary/80 duration-200 tracking-widest uppercase rounded-md shadow-lg"
+                    className="inline-block font-semibold py-3 px-6 bg-primary text-white hover:bg-primary/80 duration-200 tracking-widest uppercase rounded-md shadow-lg font-inter"
                   >
                     Mesajı Gönder
                   </button>
@@ -100,24 +100,24 @@ const Contact = () => {
               </form>
             </div>
             <div className="p-8 space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white">Bize Ulaşın</h2>
-              <p className="text-gray-500 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white font-inter">BİZE ULAŞIN</h2>
+              <p className="text-gray-500 dark:text-white font-poppins">
                 HYD POINT olarak alım satım sektöründe sizinle çalışmaktan büyük mutluluk duyarız.
                 Bizimle iletişime geçmek için aşağıdaki numaraları kullanabilirsiniz.
               </p>
 
-              <p className="text-black dark:text-white">
+              <p className="text-black dark:text-white font-poppins">
                 Daha fazla bilgi almak için aşağıdaki numaralardan bize ulaşabilirsiniz.
               </p>
 
               <div className="text-black dark:text-white space-y-4">
                 <div className="flex items-center gap-3">
                   <FaMobileAlt />
-                  <p>(+90) 533 600 03 62</p>
+                  <p className="font-inter">(+90) 533 600 03 62</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <FaMobileAlt />
-                  <p>(+90) 542 510 42 82</p>
+                  <p className="font-inter">(+90) 542 510 42 82</p>
                 </div>
               </div>
 
