@@ -15,18 +15,18 @@ const About = () => {
           </div>
           <div>
             <div className="space-y-6 sm:p-16 pb-6 text-lg">
-              <p data-aos="fade-up" className="leading-8 tracking-wide font-poppins">
+              <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 HYD Point, ticaretin her aşamasında güvenilir ve kaliteli çözümler sunarak iş ortaklarına değer katar. Sektördeki deneyimimizle iş süreçlerini kolaylaştırıyor ve büyümeyi destekliyoruz.
               </p>
-              <p data-aos="fade-up" className="leading-8 tracking-wide font-poppins">
+              <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 Güçlü altyapımızla stratejik çözümler sunuyor ve müşterilerimizin rekabetçi avantaj elde etmesine yardımcı oluyoruz. Yenilikçi yaklaşımımızla her zaman en iyi ticaret deneyimini sağlamayı amaçlıyoruz.
               </p>
 
-              <p data-aos="fade-up" className="leading-8 tracking-wide font-poppins">
+              <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 Vizyonumuz, sektördeki liderliğimizi sürdürmek, misyonumuz ise güvenilir hizmet anlayışımızla kalıcı başarılar elde etmektir. Her projede kaliteyi ve müşteri memnuniyetini ön planda tutuyoruz.
               </p>
 
-              <p data-aos="fade-up" className="leading-8 tracking-wide font-poppins">
+              <p data-aos="fade-up" className="leading-8 tracking-wide font-inter">
                 Ekibimiz, her biri alanında uzman profesyonellerden oluşuyor ve yenilikçi çözümlerle iş ortaklarımızın hedeflerine ulaşmalarını sağlıyoruz.
               </p>
 
